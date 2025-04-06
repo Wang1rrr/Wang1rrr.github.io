@@ -212,7 +212,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -350,7 +350,7 @@
 <h1 id="WP学习与复现"><a href="#WP学习与复现" class="headerlink" title="WP学习与复现"></a>WP学习与复现</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><h3 id="禁止内卷"><a href="#禁止内卷" class="headerlink" title="禁止内卷"></a>禁止内卷</h3><blockquote>
 <p>官方题解：</p>
 <p>本题事实上是由真实案例改编的，当然当时用的不是平方差，数据集也没这么离谱（</p>
-<p>看过 <a class="link"   target="_blank" rel="noopener" href="https://flask.palletsprojects.com/en/stable/patterns/fileuploads/" >Flask 文档 “Uploading Files” <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的同学应该知道，有一个重要的函数 <code>secure_filename()</code>，用来处理用户提供的文件名：</p>
+<p>看过 <a class="link" target="_blank" rel="noopener" href="https://flask.palletsprojects.com/en/stable/patterns/fileuploads/">Flask 文档 “Uploading Files” <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的同学应该知道，有一个重要的函数 <code>secure_filename()</code>，用来处理用户提供的文件名：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; secure_filename(&quot;My cool movie.mov&quot;)</span><br><span class="line">&#x27;My_cool_movie.mov&#x27;</span><br><span class="line">&gt;&gt; secure_filename(&quot;../../../etc/passwd&quot;)</span><br><span class="line">&#x27;etc_passwd&#x27;</span><br><span class="line">&gt;&gt; secure_filename(&#x27;i contain cool \xfcml\xe4uts.txt&#x27;)</span><br><span class="line">&#x27;i_contain_cool_umlauts.txt&#x27;</span><br></pre></td></tr></table></figure></div>
 
 
@@ -361,7 +361,7 @@
 
 
 <p>Body 里的 <code>filename</code> 就对应的代码中的 <code>file.filename</code>，虽然是「文件名」，但是没有什么东西在阻止你往这个文件名里面加别的字符，比如说 <code>/</code> 和 <code>.</code>。如果 <code>filename</code> 是 <code>../../../../../tmp/a</code>，那么 <code>os.path.join</code> 和 <code>file.save</code> 都不会做任何处理，导致路径穿越漏洞。</p>
-<p>然后接下来我们需要确定要写什么文件，写到哪里。根据题目提示，一个非常直觉的做法就是覆盖掉这段 Python 代码的文件。根据 <a class="link"   target="_blank" rel="noopener" href="https://flask.palletsprojects.com/en/stable/cli/" >Flask “Command Line Interface” <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的文档可以知道：</p>
+<p>然后接下来我们需要确定要写什么文件，写到哪里。根据题目提示，一个非常直觉的做法就是覆盖掉这段 Python 代码的文件。根据 <a class="link" target="_blank" rel="noopener" href="https://flask.palletsprojects.com/en/stable/cli/">Flask “Command Line Interface” <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 的文档可以知道：</p>
 <blockquote>
 <p>While –app supports a variety of options for specifying your application, most use cases should be simple. Here are the typical values:</p>
 <p>(nothing)</p>
@@ -393,17 +393,17 @@
 <p>这就是差距吧(╥ω╥)</p>
 <h2 id="general"><a href="#general" class="headerlink" title="general"></a>general</h2><h3 id="不宽的宽字符"><a href="#不宽的宽字符" class="headerlink" title="不宽的宽字符"></a>不宽的宽字符</h3><blockquote>
 <p>官方题解：<br>字符串是 <code>NULL</code> 结尾 (zero-terminated) 的，如果在字符串的中间加入一个 <code>\0</code>，就可以在<strong>字符串层面</strong>丢弃后面的内容。</p>
-<p>我们想要构造前两个字符 <code>th</code> 对应的输入，那么就去找到 t 和 h 的 <a class="link"   target="_blank" rel="noopener" href="https://www.ascii-code.com/" >ASCII 代码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，分别是 <code>0x74</code> 和 <code>0x68</code>，然后根据上面的讨论，需要构造的宽字符就是 <code>0x6874</code>，去 <a class="link"   target="_blank" rel="noopener" href="https://symbl.cc/en/unicode-table/" >Unicode 代码表 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 上找到这个字符，即 <code>桴</code>。就这样一步一步地转化，可以得到我们的 payload，即 <code>桴晥慬g</code>。</p>
+<p>我们想要构造前两个字符 <code>th</code> 对应的输入，那么就去找到 t 和 h 的 <a class="link" target="_blank" rel="noopener" href="https://www.ascii-code.com/">ASCII 代码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，分别是 <code>0x74</code> 和 <code>0x68</code>，然后根据上面的讨论，需要构造的宽字符就是 <code>0x6874</code>，去 <a class="link" target="_blank" rel="noopener" href="https://symbl.cc/en/unicode-table/">Unicode 代码表 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 上找到这个字符，即 <code>桴</code>。就这样一步一步地转化，可以得到我们的 payload，即 <code>桴晥慬g</code>。</p>
 </blockquote>
 <p>将宽字符转化为窄字符的过程中，将Unicode转化为ASCII码就可以得到结果，与官方题解类似地，如果想要构造Z:\theflag，只需要构造<code>Z:/theflag 0</code> <code>㩚琯敨汦条Ā</code></p>
 <p>确实是完全没接触过的知识<del>（杂项真杂啊）</del></p>
 <h3 id="PowerfulShell"><a href="#PowerfulShell" class="headerlink" title="PowerfulShell"></a>PowerfulShell</h3><blockquote>
 <p>官方题解：</p>
 <p><code>~</code> 会被扩展为 <code>$HOME</code> 变量即家目录，所以我们可以将 <code>~</code> 赋值给符合 bash 命名规则（<code>[_|a-z|A-Z]*</code>）的变量，从而任意使用这 8 个字符。</p>
-<p><code>/players</code> 可以拼凑出很多常见命令比如 <code>ls</code>、<code>ps</code>，参考 <a class="link"   target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html" >Shell Parameter Expansion <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，我们只需要使用 <code>$&#123;parameter:offset:length&#125;</code> 的形式就可以拼接字符串任意位置的字符，虽然 PowerfulShell 禁止使用字符 <code>0</code>，看似不能获取首位字符，但继续阅读文档可知这一限制是可以绕过的：\</p>
+<p><code>/players</code> 可以拼凑出很多常见命令比如 <code>ls</code>、<code>ps</code>，参考 <a class="link" target="_blank" rel="noopener" href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">Shell Parameter Expansion <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，我们只需要使用 <code>$&#123;parameter:offset:length&#125;</code> 的形式就可以拼接字符串任意位置的字符，虽然 PowerfulShell 禁止使用字符 <code>0</code>，看似不能获取首位字符，但继续阅读文档可知这一限制是可以绕过的：\</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ string=01234567890abcdefgh</span><br><span class="line">$ echo $&#123;string: -7:2&#125;</span><br><span class="line">bc</span><br></pre></td></tr></table></figure></div>
 
-<p>单依靠家目录的 8 个字符不足以解决本题，检索 <a class="link"   target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/shell-script-to-demonstrate-special-parameters-with-example/" >shell special variable <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 可找到不包含字母的特殊变量 <code>$_</code>, <code>$$</code>, <code>$-</code>, <code>$_</code> 等。设计 PowerfulShell 时笔者将 get shell 所需最简单的两个字符 <code>s</code> 和 <code>h</code> 分别分到了家目录和 <code>$-</code>，其中 <code>$-</code> 算是一个隐藏前置条件，读者可以自行分析 <code>$-</code> 变量的意义。到了这一步已经具备完成本题的全部条件，但不排除选手解题过程中有其他思路。</p>
+<p>单依靠家目录的 8 个字符不足以解决本题，检索 <a class="link" target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/shell-script-to-demonstrate-special-parameters-with-example/">shell special variable <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 可找到不包含字母的特殊变量 <code>$_</code>, <code>$$</code>, <code>$-</code>, <code>$_</code> 等。设计 PowerfulShell 时笔者将 get shell 所需最简单的两个字符 <code>s</code> 和 <code>h</code> 分别分到了家目录和 <code>$-</code>，其中 <code>$-</code> 算是一个隐藏前置条件，读者可以自行分析 <code>$-</code> 变量的意义。到了这一步已经具备完成本题的全部条件，但不排除选手解题过程中有其他思路。</p>
 </blockquote>
 <p>这个题抽象到，就算我已经看了题解，依旧没法想明白这是如何实现的</p>
 <p>暂且留下一些其他选手的WP，等日后再回顾吧</p>
@@ -434,13 +434,11 @@
 
 
 <p>通过 <code>sh</code> 即可获得 shell，并在里面读取 flag：</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PowerfulShell@hackergame&gt; _5=$&#123;_4:14:2&#125;</span><br><span class="line">PowerfulShell@hackergame&gt; $_5</span><br><span class="line">cat /flag</span><br><span class="line">flag&#123;N0w_I_Adm1t_ur_tru1y_5He11_m4ster_bae08a2ded&#125;</span><br></pre></td></tr></table></figure></div>
-</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PowerfulShell@hackergame&gt; _5=$&#123;_4:14:2&#125;</span><br><span class="line">PowerfulShell@hackergame&gt; $_5</span><br><span class="line">cat /flag</span><br><span class="line">flag&#123;N0w_I_Adm1t_ur_tru1y_5He11_m4ster_bae08a2ded&#125;</span><br></pre></td></tr></table></figure></div></blockquote>
 <h2 id="math"><a href="#math" class="headerlink" title="math"></a>math</h2><h3 id="强大的正则表达式"><a href="#强大的正则表达式" class="headerlink" title="强大的正则表达式"></a>强大的正则表达式</h3><blockquote>
 <p>官方题解：</p>
 <p>第一问，由于判断一个十进制数是否整除 16 只需要看最后四位，所以枚举所有符合条件的最后四位，构造对应的正则表达式就可以了。严格来说还要考虑不足四位的情况，但是测试数据里面出现这种情况的概率很小，忽略掉也是通过的。</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;(0|1|2|3|4|5|6|7|8|9)*&#x27;</span> + <span class="string">&#x27;(&#x27;</span> + <span class="string">&#x27;|&#x27;</span>.join(<span class="string">f&#x27;<span class="subst">&#123;i:04d&#125;</span>&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">10000</span>, <span class="number">16</span>)) + <span class="string">&#x27;)&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;(0|1|2|3|4|5|6|7|8|9)*&#x27;</span> + <span class="string">&#x27;(&#x27;</span> + <span class="string">&#x27;|&#x27;</span>.join(<span class="string">f&#x27;<span class="subst">&#123;i:04d&#125;</span>&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">10000</span>, <span class="number">16</span>)) + <span class="string">&#x27;)&#x27;</span>)</span><br></pre></td></tr></table></figure></div></blockquote>
 <p>正则表达式一直是我的弱项，之前一直靠GPT来解决，现在GPT也无法解决的情况出现后，就无法应对了</p>
 <p>在写这道题时，我在网上找到了16的倍数的判断方法，但始终无法用正则表达式表示下来</p>
 <p>这段程序跑下来应该是这样的</p>
@@ -629,7 +627,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 16 篇文章
+                        共撰写了 17 篇文章
                     </span>
                     
                 </p>

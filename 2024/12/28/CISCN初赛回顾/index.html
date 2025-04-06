@@ -212,7 +212,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -319,7 +319,7 @@
 <p>运行完脚本就可以直接读app.py获取flag了。</p>
 <h3 id="hello-web"><a href="#hello-web" class="headerlink" title="hello_web"></a>hello_web</h3><p>首先进入到页面，在源代码中找到注释，得知有tips.php和hackme.php，又由于访问是通过传参的方式进行的，于是尝试目录穿越，失败。</p>
 <p>那就读取tips.php与hackme.php，直接访问会提示不对，应该访问上层目录的文件，于是考虑..&#x2F;tips.php和..&#x2F;hackme.php，发现失败，考虑双写绕过，访问….&#x2F;&#x2F;tips.php和….&#x2F;&#x2F;hackme.php，发现一个是phpinfo()，另一个是一段php代码，逐步分析执行该php代码，得到这是一个传参为cmd_66.99的一句话木马。</p>
-<p>直接用蚁剑连接发现虚拟终端无法使用,怀疑是disable_functions的问题，于是在GitHub上找到<a class="link"   target="_blank" rel="noopener" href="https://github.com/l3m0n/Bypass_Disable_functions_Shell" >bypass脚本 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，注入到hackme.php，其中需要注意cmd_66.99的下划线需要用’[‘来绕过。</p>
+<p>直接用蚁剑连接发现虚拟终端无法使用,怀疑是disable_functions的问题，于是在GitHub上找到<a class="link" target="_blank" rel="noopener" href="https://github.com/l3m0n/Bypass_Disable_functions_Shell">bypass脚本 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，注入到hackme.php，其中需要注意cmd_66.99的下划线需要用’[‘来绕过。</p>
 <p>注入之后就可以进行RCE了，直接读取flag即可。</p>
 <h1 id="赛后感想"><a href="#赛后感想" class="headerlink" title="赛后感想"></a>赛后感想</h1><p>其实我在做题时还是没法独立做出来，还是不得不借助学长的帮忙，回想起来非常惭愧。还好距离半决赛还有一段时间，这段时间内我会努力提高的（大概</p>
 
@@ -493,7 +493,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 16 篇文章
+                        共撰写了 17 篇文章
                     </span>
                     
                 </p>
