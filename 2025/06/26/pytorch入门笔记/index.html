@@ -41,7 +41,7 @@
 <meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/16.png">
 <meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/4.png">
 <meta property="article:published_time" content="2025-06-26T02:17:20.000Z">
-<meta property="article:modified_time" content="2025-06-27T13:06:49.702Z">
+<meta property="article:modified_time" content="2025-06-27T13:17:10.889Z">
 <meta property="article:author" content="Wang1rrr">
 <meta property="article:tag" content="基础知识">
 <meta name="twitter:card" content="summary">
@@ -393,8 +393,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-06-27 21:06:49</span>
-            <span class="mobile">2025-06-27 21:06:49</span>
+            <span class="desktop">2025-06-27 21:17:10</span>
+            <span class="mobile">2025-06-27 21:17:10</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -449,7 +449,8 @@
 <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习pytorch之前，首先需要对神经网络的知识有基本的了解</p>
 <h3 id="人工神经元模型"><a href="#人工神经元模型" class="headerlink" title="人工神经元模型"></a>人工神经元模型</h3><p>人工神经元是神经网络的基本单元，其数学模型为：</p>
 <img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/5.png" class title="公式">
-<p>$$<br>y&#x3D;f(\sum_{i&#x3D;1}^{n}w_ix_i+b)<br>$$<br>其中：</p>
+
+<p>其中：</p>
 <ul>
 <li>x_i为输入特征（i&#x3D;1,2,…,n）</li>
 <li>w_i为对应权重</li>
@@ -465,26 +466,33 @@
 </ul>
 <p>则网络可表示为层级变换：</p>
 <img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/7.png" class title="公式">
-<p>$$<br>a^{(l)}&#x3D;f^{(l)}(z^{(l)}),z^{(l)}&#x3D;W^{(l)}a^{(l−1)}+b^{(l)}<br>$$</p>
+
+
+
+
 <h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><p>引入非线性的关键函数，常见类型：</p>
 <ul>
 <li><p><strong>Sigmoid</strong>：</p>
 </li>
 <li><img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/8.png" class title="公式">
-<p>$$<br>\sigma(z)&#x3D;\frac{1}{1+e^{-z}}<br>$$</p>
+
+
 </li>
 <li><p><strong>ReLU</strong>：</p>
 </li>
 <li><img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/9.png" class title="公式">
-<p>$$<br>ReLU(z)&#x3D;max(0,z)<br>$$</p>
+
+
 </li>
 <li><p><strong>Softmax</strong>（输出层）：</p>
 <img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/10.png" class title="公式"></li>
 </ul>
-<p>$$<br>softmax(z)<em>i &#x3D; \frac{e^{z</em>{i}}}{\sum^{K}_{j&#x3D;1}e^{z_j}}, i&#x3D;1,2,\cdots,K<br>$$</p>
 <h3 id="优化算法"><a href="#优化算法" class="headerlink" title="优化算法"></a>优化算法</h3><p>最小化损失函数 L 的迭代方法（如梯度下降）：</p>
 <img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/11.png" class title="公式">
-<p>$$<br>\theta_{t+1}&#x3D;\theta_t-η∇_θ\mathcal{L}(θ_t)<br>$$<br>其中：</p>
+
+
+
+<p>其中：</p>
 <ul>
 <li>θ：模型参数（权重&#x2F;偏置）</li>
 <li>η：学习率</li>
@@ -492,26 +500,34 @@
 </ul>
 <h3 id="前向传播"><a href="#前向传播" class="headerlink" title="前向传播"></a>前向传播</h3><p>数据从输入层流向输出层的计算过程：</p>
 <img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/12.png" class title="公式">
-<p>$$<br>z^{(1)}&#x3D;W^{(1)}x+b^{(1)}\a^{(1)}&#x3D;f^{(1)}(z^{(1)})\⋮\\hat{y}&#x3D;a^{(L)}&#x3D;f^{(L)}(z^{(L)})<br>$$<br>输出y为预测结果。</p>
+
+
+
+<p>输出y为预测结果。</p>
 <h3 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h3><p>通过链式法则计算损失函数对参数的梯度：</p>
 <ol>
 <li><p>输出层误差：</p>
-<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/13.png" class title="公式"></li>
-</ol>
-<p>$$<br>δ^{(L)}&#x3D;∇_{\hat{y}}\mathcal{L}⊙f^{(L)′}(z^{(L)})<br>$$</p>
-<ol start="2">
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/13.png" class title="公式">
+
+
+
+
+</li>
 <li><p>隐藏层误差反向传播：</p>
-<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/14.png" class title="公式"></li>
-</ol>
-<p>$$<br>δ^{(l)}&#x3D;((W^{(l+1)})^{T}δ^{(l+1)})⊙f^{(l)′}(z^{(l)})<br>$$</p>
-<ol start="3">
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/14.png" class title="公式">
+
+
+
+
+</li>
 <li><p>参数梯度：</p>
 <img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/15.png" class title="公式"></li>
 </ol>
-<p>$$<br>∇<em>{W^{(l)}}\mathcal{L}&#x3D;δ^{(l)}(a^{(l−1)})^T,∇</em>{b^{(l)}}\mathcal{L}&#x3D;δ^{(l)}<br>$$</p>
 <h3 id="权重更新"><a href="#权重更新" class="headerlink" title="权重更新"></a>权重更新</h3><p>根据优化算法更新参数（以梯度下降为例）：</p>
 <img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/16.png" class title="公式">
-<p>$$<br>W^{(l)}←W^{(l)}−η∇<em>{W^{(l)}}\mathcal{L} \<br>b^{(l)}←b^{(l)}−η∇</em>{b^{(l)}}\mathcal{L}<br>$$</p>
+
+
+
 <h2 id="最基本的单位元——tensor"><a href="#最基本的单位元——tensor" class="headerlink" title="最基本的单位元——tensor"></a>最基本的单位元——tensor</h2><p>PyTorch的核心数据结构是<code>tensor</code>（张量），类似于NumPy的<code>ndarray</code>，但支持GPU加速计算。tensor可以看作多维数组，是神经网络中数据的基本载体。</p>
 <h3 id="创建tensor"><a href="#创建tensor" class="headerlink" title="创建tensor"></a>创建tensor</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建未初始化tensor</span></span><br><span class="line">x = torch.empty(<span class="number">2</span>, <span class="number">3</span>)  <span class="comment"># 2行3列</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建随机初始化tensor</span></span><br><span class="line">rand_tensor = torch.rand(<span class="number">2</span>, <span class="number">3</span>)  <span class="comment"># [0,1)均匀分布</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建全零tensor</span></span><br><span class="line">zeros_tensor = torch.zeros(<span class="number">2</span>, <span class="number">3</span>, dtype=torch.long)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从数据直接创建</span></span><br><span class="line">data_tensor = torch.tensor([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从NumPy数组创建</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">numpy_array = np.array([[<span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>]])</span><br><span class="line">tensor_from_np = torch.from_numpy(numpy_array)</span><br></pre></td></tr></table></figure></div>
 
@@ -682,7 +698,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-06-27 21:06:49
+                    :</strong> 2025-06-27 21:17:10
             </li>
         
         <li>
