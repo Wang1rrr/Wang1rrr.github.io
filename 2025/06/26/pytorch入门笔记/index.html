@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Wang1r">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2025/06/26/pytorch入门笔记/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="由于实在是在pytorch相关的题上吃了太多亏了，我觉得无论如何也该找机会学一下，于是便学了 环境配置首先在终端输入nvcc --version确认当前的cuda版本   前往pytorch官网下载对应版本的pytorch   创建测试文件，测试pytorch是否安装完毕且能识别到GPU 12345678910import torch# 检查 GPU 是否可用print(&quot;Is GPU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pytorch入门笔记">
+<meta property="og:url" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Wang1r的博客">
+<meta property="og:description" content="由于实在是在pytorch相关的题上吃了太多亏了，我觉得无论如何也该找机会学一下，于是便学了 环境配置首先在终端输入nvcc --version确认当前的cuda版本   前往pytorch官网下载对应版本的pytorch   创建测试文件，测试pytorch是否安装完毕且能识别到GPU 12345678910import torch# 检查 GPU 是否可用print(&quot;Is GPU">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/1.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/2.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/3.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/5.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/7.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/8.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/9.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/10.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/11.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/12.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/13.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/14.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/15.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/16.png">
+<meta property="og:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/4.png">
+<meta property="article:published_time" content="2025-06-26T02:17:20.000Z">
+<meta property="article:modified_time" content="2025-06-27T13:06:49.702Z">
+<meta property="article:author" content="Wang1rrr">
+<meta property="article:tag" content="基础知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/1.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/example.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/example.png">
+    <meta name="theme-color" content="#FFD700">
+    <link rel="shortcut icon" href="/images/example.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            pytorch入门笔记 | Wang1rrr&#39;s Blog
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#FFD700","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/690195.jpg","dark":"/images/690195.jpg"},"title":"想要成为特别的人","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#000","dark":"#d1d1b6"},"text_style":{"title_size":"3.2rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":true,"family":"YouYuan","url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/Wang1rrr","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.3","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Tags":{"icon":"fa-solid fa-tags","path":"/tags/"},"About":{"icon":"fa-regular fa-user","path":"/about/"},"Friends":{"icon":"fa-solid fa-link","path":"/links/"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"cloud"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/11/1 12:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container flex flex-col justify-between min-h-dvh">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Wang1rrr&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags/"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    标签
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about/"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/links/"
+                                        >
+                                    <i class="fa-solid fa-link fa-fw"></i>
+                                    友情链接
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags/"
+                        >
+                            <span>
+                                标签
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about/"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/links/"
+                        >
+                            <span>
+                                友情链接
+                            </span>
+                            
+                                <i class="fa-solid fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">22</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">pytorch入门笔记</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/example.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Wang1r</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-06-26 10:17:20</span>
+        <span class="mobile">2025-06-26 10:17:20</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-06-27 21:06:49</span>
+            <span class="mobile">2025-06-27 21:06:49</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>由于实在是在pytorch相关的题上吃了太多亏了，我觉得无论如何也该找机会学一下，于是便学了</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>首先在终端输入<code>nvcc --version</code>确认当前的cuda版本</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/1.png" class title="确认CUDA版本">
+
+<p>前往pytorch官网下载对应版本的pytorch</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/2.png" class title="下载pytorch">
+
+<p>创建测试文件，测试pytorch是否安装完毕且能识别到GPU</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 GPU 是否可用</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Is GPU available:&quot;</span>, torch.cuda.is_available())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取 GPU 设备数量</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Number of GPUs:&quot;</span>, torch.cuda.device_count())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前 GPU 设备名称</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Current GPU device name:&quot;</span>, torch.cuda.get_device_name(<span class="number">0</span>))</span><br></pre></td></tr></table></figure></div>
+
+<p>可以看到pytorch可以正常使用且识别到了GPU</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/3.png" class title="测试结果">
+
+<p>然后就可以正式开始学习pytorch了</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>在学习pytorch之前，首先需要对神经网络的知识有基本的了解</p>
+<h3 id="人工神经元模型"><a href="#人工神经元模型" class="headerlink" title="人工神经元模型"></a>人工神经元模型</h3><p>人工神经元是神经网络的基本单元，其数学模型为：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/5.png" class title="公式">
+<p>$$<br>y&#x3D;f(\sum_{i&#x3D;1}^{n}w_ix_i+b)<br>$$<br>其中：</p>
+<ul>
+<li>x_i为输入特征（i&#x3D;1,2,…,n）</li>
+<li>w_i为对应权重</li>
+<li>b为偏置项</li>
+<li>f(⋅)为激活函数</li>
+</ul>
+<h3 id="神经网络结构"><a href="#神经网络结构" class="headerlink" title="神经网络结构"></a>神经网络结构</h3><p>多层神经网络由输入层、隐藏层和输出层构成。若定义：</p>
+<ul>
+<li>L：网络总层数（含输出层）</li>
+<li>a(l)：第 l层输出向量（a(0)&#x3D;x）</li>
+<li>W(l)：第 l 层权重矩阵（连接 l−1 层到 l 层）</li>
+<li>b(l)：第 l 层偏置向量</li>
+</ul>
+<p>则网络可表示为层级变换：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/7.png" class title="公式">
+<p>$$<br>a^{(l)}&#x3D;f^{(l)}(z^{(l)}),z^{(l)}&#x3D;W^{(l)}a^{(l−1)}+b^{(l)}<br>$$</p>
+<h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><p>引入非线性的关键函数，常见类型：</p>
+<ul>
+<li><p><strong>Sigmoid</strong>：</p>
+</li>
+<li><img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/8.png" class title="公式">
+<p>$$<br>\sigma(z)&#x3D;\frac{1}{1+e^{-z}}<br>$$</p>
+</li>
+<li><p><strong>ReLU</strong>：</p>
+</li>
+<li><img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/9.png" class title="公式">
+<p>$$<br>ReLU(z)&#x3D;max(0,z)<br>$$</p>
+</li>
+<li><p><strong>Softmax</strong>（输出层）：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/10.png" class title="公式"></li>
+</ul>
+<p>$$<br>softmax(z)<em>i &#x3D; \frac{e^{z</em>{i}}}{\sum^{K}_{j&#x3D;1}e^{z_j}}, i&#x3D;1,2,\cdots,K<br>$$</p>
+<h3 id="优化算法"><a href="#优化算法" class="headerlink" title="优化算法"></a>优化算法</h3><p>最小化损失函数 L 的迭代方法（如梯度下降）：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/11.png" class title="公式">
+<p>$$<br>\theta_{t+1}&#x3D;\theta_t-η∇_θ\mathcal{L}(θ_t)<br>$$<br>其中：</p>
+<ul>
+<li>θ：模型参数（权重&#x2F;偏置）</li>
+<li>η：学习率</li>
+<li>t：迭代步数</li>
+</ul>
+<h3 id="前向传播"><a href="#前向传播" class="headerlink" title="前向传播"></a>前向传播</h3><p>数据从输入层流向输出层的计算过程：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/12.png" class title="公式">
+<p>$$<br>z^{(1)}&#x3D;W^{(1)}x+b^{(1)}\a^{(1)}&#x3D;f^{(1)}(z^{(1)})\⋮\\hat{y}&#x3D;a^{(L)}&#x3D;f^{(L)}(z^{(L)})<br>$$<br>输出y为预测结果。</p>
+<h3 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h3><p>通过链式法则计算损失函数对参数的梯度：</p>
+<ol>
+<li><p>输出层误差：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/13.png" class title="公式"></li>
+</ol>
+<p>$$<br>δ^{(L)}&#x3D;∇_{\hat{y}}\mathcal{L}⊙f^{(L)′}(z^{(L)})<br>$$</p>
+<ol start="2">
+<li><p>隐藏层误差反向传播：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/14.png" class title="公式"></li>
+</ol>
+<p>$$<br>δ^{(l)}&#x3D;((W^{(l+1)})^{T}δ^{(l+1)})⊙f^{(l)′}(z^{(l)})<br>$$</p>
+<ol start="3">
+<li><p>参数梯度：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/15.png" class title="公式"></li>
+</ol>
+<p>$$<br>∇<em>{W^{(l)}}\mathcal{L}&#x3D;δ^{(l)}(a^{(l−1)})^T,∇</em>{b^{(l)}}\mathcal{L}&#x3D;δ^{(l)}<br>$$</p>
+<h3 id="权重更新"><a href="#权重更新" class="headerlink" title="权重更新"></a>权重更新</h3><p>根据优化算法更新参数（以梯度下降为例）：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/16.png" class title="公式">
+<p>$$<br>W^{(l)}←W^{(l)}−η∇<em>{W^{(l)}}\mathcal{L} \<br>b^{(l)}←b^{(l)}−η∇</em>{b^{(l)}}\mathcal{L}<br>$$</p>
+<h2 id="最基本的单位元——tensor"><a href="#最基本的单位元——tensor" class="headerlink" title="最基本的单位元——tensor"></a>最基本的单位元——tensor</h2><p>PyTorch的核心数据结构是<code>tensor</code>（张量），类似于NumPy的<code>ndarray</code>，但支持GPU加速计算。tensor可以看作多维数组，是神经网络中数据的基本载体。</p>
+<h3 id="创建tensor"><a href="#创建tensor" class="headerlink" title="创建tensor"></a>创建tensor</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建未初始化tensor</span></span><br><span class="line">x = torch.empty(<span class="number">2</span>, <span class="number">3</span>)  <span class="comment"># 2行3列</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建随机初始化tensor</span></span><br><span class="line">rand_tensor = torch.rand(<span class="number">2</span>, <span class="number">3</span>)  <span class="comment"># [0,1)均匀分布</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建全零tensor</span></span><br><span class="line">zeros_tensor = torch.zeros(<span class="number">2</span>, <span class="number">3</span>, dtype=torch.long)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从数据直接创建</span></span><br><span class="line">data_tensor = torch.tensor([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从NumPy数组创建</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">numpy_array = np.array([[<span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>]])</span><br><span class="line">tensor_from_np = torch.from_numpy(numpy_array)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="tensor基本属性"><a href="#tensor基本属性" class="headerlink" title="tensor基本属性"></a>tensor基本属性</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">t = torch.rand(<span class="number">2</span>, <span class="number">3</span>, device=<span class="string">&quot;cuda&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;形状: <span class="subst">&#123;t.shape&#125;</span>&quot;</span>)     <span class="comment"># torch.Size([2, 3])</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;数据类型: <span class="subst">&#123;t.dtype&#125;</span>&quot;</span>)  <span class="comment"># torch.float32</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;存储设备: <span class="subst">&#123;t.device&#125;</span>&quot;</span>) <span class="comment"># cuda:0</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;维度数: <span class="subst">&#123;t.ndim&#125;</span>&quot;</span>)     <span class="comment"># 2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;元素数量: <span class="subst">&#123;t.numel()&#125;</span>&quot;</span>) <span class="comment"># 6</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="tensor基本运算"><a href="#tensor基本运算" class="headerlink" title="tensor基本运算"></a>tensor基本运算</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">a = torch.tensor([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">b = torch.tensor([<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 算术运算</span></span><br><span class="line">c = a + b        <span class="comment"># tensor([5, 7, 9])</span></span><br><span class="line">d = a * <span class="number">2</span>        <span class="comment"># tensor([2, 4, 6])</span></span><br><span class="line">e = torch.matmul(a, b)  <span class="comment"># 点积: 1*4 + 2*5 + 3*6 = 32</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 索引切片</span></span><br><span class="line">t = torch.rand(<span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(t[<span class="number">0</span>, <span class="number">1</span>])         <span class="comment"># 第一行第二列元素</span></span><br><span class="line"><span class="built_in">print</span>(t[:, <span class="number">1</span>])          <span class="comment"># 所有行第二列</span></span><br><span class="line"><span class="built_in">print</span>(t[<span class="number">1</span>:<span class="number">3</span>, :])        <span class="comment"># 第二到三行所有列</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 形状变换</span></span><br><span class="line">t = torch.arange(<span class="number">12</span>)</span><br><span class="line">reshaped = t.view(<span class="number">3</span>, <span class="number">4</span>)  <span class="comment"># 改为3×4矩阵</span></span><br><span class="line">flattened = t.flatten()   <span class="comment"># 展平为一维</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="tensor与NumPy互转"><a href="#tensor与NumPy互转" class="headerlink" title="tensor与NumPy互转"></a>tensor与NumPy互转</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tensor转NumPy</span></span><br><span class="line">t = torch.ones(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">n = t.numpy()  <span class="comment"># 共享内存，修改t会影响n</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># NumPy转tensor</span></span><br><span class="line">n = np.ones(<span class="number">3</span>)</span><br><span class="line">t = torch.from_numpy(n)  <span class="comment"># 同样共享内存</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="GPU加速"><a href="#GPU加速" class="headerlink" title="GPU加速"></a>GPU加速</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将tensor移动到GPU</span></span><br><span class="line"><span class="keyword">if</span> torch.cuda.is_available():</span><br><span class="line">    device = torch.device(<span class="string">&quot;cuda&quot;</span>)</span><br><span class="line">    gpu_tensor = torch.ones(<span class="number">2</span>, <span class="number">2</span>, device=device)</span><br><span class="line">    <span class="comment"># 或使用to方法</span></span><br><span class="line">    cpu_tensor = torch.ones(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">    gpu_tensor = cpu_tensor.to(device)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="自动求导机制"><a href="#自动求导机制" class="headerlink" title="自动求导机制"></a>自动求导机制</h3><p>PyTorch的核心特性是<strong>自动微分</strong>，通过<code>requires_grad</code>属性启用：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = torch.tensor(<span class="number">2.0</span>, requires_grad=<span class="literal">True</span>)</span><br><span class="line">y = x**<span class="number">2</span> + <span class="number">3</span>*x + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">y.backward()  <span class="comment"># 自动计算梯度</span></span><br><span class="line"><span class="built_in">print</span>(x.grad)  <span class="comment"># dy/dx = 2x+3 = 7</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="常用tensor操作"><a href="#常用tensor操作" class="headerlink" title="常用tensor操作"></a>常用tensor操作</h3><table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">函数</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">形状变换</td>
+<td align="left"><code>view()</code>, <code>reshape()</code></td>
+<td align="left">改变tensor形状</td>
+</tr>
+<tr>
+<td align="left">维度调整</td>
+<td align="left"><code>squeeze()</code>, <code>unsqueeze()</code></td>
+<td align="left">删除&#x2F;添加维度</td>
+</tr>
+<tr>
+<td align="left">拼接</td>
+<td align="left"><code>cat()</code>, <code>stack()</code></td>
+<td align="left">连接多个tensor</td>
+</tr>
+<tr>
+<td align="left">分割</td>
+<td align="left"><code>split()</code>, <code>chunk()</code></td>
+<td align="left">分割tensor</td>
+</tr>
+<tr>
+<td align="left">数学运算</td>
+<td align="left"><code>add()</code>, <code>mul()</code>, <code>matmul()</code></td>
+<td align="left">基本数学运算</td>
+</tr>
+<tr>
+<td align="left">统计</td>
+<td align="left"><code>sum()</code>, <code>mean()</code>, <code>max()</code></td>
+<td align="left">统计计算</td>
+</tr>
+</tbody></table>
+<h2 id="神经网络核心模块——torch-nn与torch-nn-functional"><a href="#神经网络核心模块——torch-nn与torch-nn-functional" class="headerlink" title="神经网络核心模块——torch.nn与torch.nn.functional"></a>神经网络核心模块——torch.nn与torch.nn.functional</h2><p>在PyTorch中，<code>torch.nn</code>和<code>torch.nn.functional</code>是构建神经网络的两个核心模块。它们提供了构建深度学习模型所需的各种层、函数和工具。</p>
+<h2 id="torch-nn模块"><a href="#torch-nn模块" class="headerlink" title="torch.nn模块"></a>torch.nn模块</h2><p><code>torch.nn</code>是PyTorch中用于构建神经网络的主要模块，提供了面向对象的接口。它包含各种预定义的层（Layer）和模型容器。</p>
+<h3 id="常用神经网络层"><a href="#常用神经网络层" class="headerlink" title="常用神经网络层"></a>常用神经网络层</h3><h4 id="1-线性层（全连接层）"><a href="#1-线性层（全连接层）" class="headerlink" title="1. 线性层（全连接层）"></a>1. 线性层（全连接层）</h4><p>线性层（也称为全连接层）是神经网络中最基础的层类型，负责存储和操作层与层之间的<strong>权重矩阵</strong>与<strong>偏置向量</strong>。它在神经网络中扮演着核心角色，实现了输入特征到输出特征的线性变换。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义线性层：输入特征数=10，输出特征数=5</span></span><br><span class="line">linear_layer = nn.Linear(<span class="number">10</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用示例</span></span><br><span class="line">input_data = torch.randn(<span class="number">3</span>, <span class="number">10</span>)  <span class="comment"># 批量大小3，特征数10</span></span><br><span class="line">output = linear_layer(input_data)</span><br><span class="line"><span class="built_in">print</span>(output.shape)  <span class="comment"># torch.Size([3, 5])</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="2-卷积层"><a href="#2-卷积层" class="headerlink" title="2. 卷积层"></a>2. 卷积层</h4><p>卷积层是卷积神经网络（CNN）的核心组件，专门用于处理具有网格结构的数据（如图像、音频、时间序列等）。它通过局部感受野和权重共享机制，高效地提取空间特征。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建卷积层：输入通道=3，输出通道=16，卷积核3×3，步长=1，填充=1</span></span><br><span class="line">conv_layer = nn.Conv2d(</span><br><span class="line">    in_channels=<span class="number">3</span>,        <span class="comment"># 输入通道数（RGB图像为3）</span></span><br><span class="line">    out_channels=<span class="number">16</span>,      <span class="comment"># 输出通道数/卷积核数量</span></span><br><span class="line">    kernel_size=<span class="number">3</span>,        <span class="comment"># 卷积核尺寸（可设为整数或元组）</span></span><br><span class="line">    stride=<span class="number">1</span>,             <span class="comment"># 卷积步长</span></span><br><span class="line">    padding=<span class="number">1</span>,            <span class="comment"># 填充大小（保持空间分辨率）</span></span><br><span class="line">    dilation=<span class="number">1</span>,           <span class="comment"># 空洞率（默认为1）</span></span><br><span class="line">    groups=<span class="number">1</span>,             <span class="comment"># 分组卷积（默认为1）</span></span><br><span class="line">    bias=<span class="literal">True</span>,            <span class="comment"># 是否使用偏置项</span></span><br><span class="line">    padding_mode=<span class="string">&#x27;zeros&#x27;</span>  <span class="comment"># 填充模式（默认零填充）</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成输入数据：批量大小4，通道3，高度32，宽度32</span></span><br><span class="line">input_data = torch.randn(<span class="number">4</span>, <span class="number">3</span>, <span class="number">32</span>, <span class="number">32</span>)  <span class="comment"># 形状 [batch, channels, height, width]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 前向传播</span></span><br><span class="line">output = conv_layer(input_data)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;输出形状:&quot;</span>, output.shape)  <span class="comment"># torch.Size([4, 16, 32, 32])</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="3-循环神经网络层"><a href="#3-循环神经网络层" class="headerlink" title="3. 循环神经网络层"></a>3. 循环神经网络层</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># LSTM层：输入大小=100，隐藏层大小=50，层数=2</span></span><br><span class="line">lstm = nn.LSTM(input_size=<span class="number">100</span>, hidden_size=<span class="number">50</span>, num_layers=<span class="number">2</span>, batch_first=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用示例</span></span><br><span class="line">sequence = torch.randn(<span class="number">5</span>, <span class="number">10</span>, <span class="number">100</span>)  <span class="comment"># 批量大小5，序列长度10，特征数100</span></span><br><span class="line">output, (hn, cn) = lstm(sequence)</span><br><span class="line"><span class="built_in">print</span>(output.shape)  <span class="comment"># torch.Size([5, 10, 50])</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="4-其他常用层"><a href="#4-其他常用层" class="headerlink" title="4. 其他常用层"></a>4. 其他常用层</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dropout层：随机丢弃50%神经元</span></span><br><span class="line">dropout = nn.Dropout(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 批量归一化层</span></span><br><span class="line">batch_norm = nn.BatchNorm2d(<span class="number">16</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最大池化层</span></span><br><span class="line">max_pool = nn.MaxPool2d(<span class="number">2</span>, stride=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 嵌入层（用于NLP）</span></span><br><span class="line">embedding = nn.Embedding(<span class="number">1000</span>, <span class="number">128</span>)  <span class="comment"># 词汇表大小1000，嵌入维度128</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="模型容器：Module"><a href="#模型容器：Module" class="headerlink" title="模型容器：Module"></a>模型容器：Module</h3><p><code>nn.Module</code>是所有神经网络模块的基类。自定义网络应继承此类：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">SimpleCNN</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(SimpleCNN, <span class="variable language_">self</span>).__init__()</span><br><span class="line">        <span class="variable language_">self</span>.conv1 = nn.Conv2d(<span class="number">3</span>, <span class="number">16</span>, <span class="number">3</span>)  <span class="comment"># 输入3通道，输出16通道，卷积核3×3</span></span><br><span class="line">        <span class="variable language_">self</span>.relu = nn.ReLU()</span><br><span class="line">        <span class="variable language_">self</span>.pool = nn.MaxPool2d(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">        <span class="variable language_">self</span>.fc = nn.Linear(<span class="number">16</span> * <span class="number">15</span> * <span class="number">15</span>, <span class="number">10</span>)  <span class="comment"># 假设输入图像32×32，池化后16×16</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        x = <span class="variable language_">self</span>.pool(<span class="variable language_">self</span>.relu(<span class="variable language_">self</span>.conv1(x)))</span><br><span class="line">        x = x.view(-<span class="number">1</span>, <span class="number">16</span> * <span class="number">15</span> * <span class="number">15</span>)  <span class="comment"># 展平</span></span><br><span class="line">        x = <span class="variable language_">self</span>.fc(x)</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化模型</span></span><br><span class="line">model = SimpleCNN()</span><br><span class="line"><span class="built_in">print</span>(model)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p><code>torch.nn</code>提供了多种损失函数：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 分类任务常用损失函数</span></span><br><span class="line">cross_entropy = nn.CrossEntropyLoss()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 回归任务常用损失函数</span></span><br><span class="line">mse_loss = nn.MSELoss()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用示例</span></span><br><span class="line">outputs = torch.randn(<span class="number">3</span>, <span class="number">5</span>)  <span class="comment"># 3个样本，5个类别</span></span><br><span class="line">targets = torch.tensor([<span class="number">1</span>, <span class="number">0</span>, <span class="number">4</span>])  <span class="comment"># 真实标签</span></span><br><span class="line">loss = cross_entropy(outputs, targets)</span><br><span class="line"><span class="built_in">print</span>(loss)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="torch-nn-functional模块"><a href="#torch-nn-functional模块" class="headerlink" title="torch.nn.functional模块"></a>torch.nn.functional模块</h2><p><code>torch.nn.functional</code>（通常简写为<code>F</code>）提供函数式接口，包含许多无状态的函数（即不包含可学习参数）。</p>
+<h3 id="激活函数-1"><a href="#激活函数-1" class="headerlink" title="激活函数"></a>激活函数</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"></span><br><span class="line">x = torch.randn(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ReLU激活函数</span></span><br><span class="line">relu_out = F.relu(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sigmoid激活函数</span></span><br><span class="line">sigmoid_out = F.sigmoid(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Softmax激活函数</span></span><br><span class="line">softmax_out = F.softmax(x, dim=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Tanh激活函数</span></span><br><span class="line">tanh_out = F.tanh(x)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="卷积操作"><a href="#卷积操作" class="headerlink" title="卷积操作"></a>卷积操作</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 函数式卷积</span></span><br><span class="line"><span class="built_in">input</span> = torch.randn(<span class="number">1</span>, <span class="number">3</span>, <span class="number">32</span>, <span class="number">32</span>)</span><br><span class="line">weight = torch.randn(<span class="number">16</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>)  <span class="comment"># 输出通道×输入通道×高×宽</span></span><br><span class="line">bias = torch.randn(<span class="number">16</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行卷积（手动指定权重和偏置）</span></span><br><span class="line">conv_out = F.conv2d(<span class="built_in">input</span>, weight, bias, stride=<span class="number">1</span>, padding=<span class="number">1</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="池化操作"><a href="#池化操作" class="headerlink" title="池化操作"></a>池化操作</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 最大池化</span></span><br><span class="line">max_pool_out = F.max_pool2d(<span class="built_in">input</span>, kernel_size=<span class="number">2</span>, stride=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 平均池化</span></span><br><span class="line">avg_pool_out = F.avg_pool2d(<span class="built_in">input</span>, kernel_size=<span class="number">2</span>, stride=<span class="number">2</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dropout（训练时启用，评估时禁用）</span></span><br><span class="line">dropout_out = F.dropout(<span class="built_in">input</span>, p=<span class="number">0.5</span>, training=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="损失函数-1"><a href="#损失函数-1" class="headerlink" title="损失函数"></a>损失函数</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 函数式损失函数</span></span><br><span class="line">loss = F.cross_entropy(outputs, targets)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 等价于</span></span><br><span class="line">loss = F.nll_loss(F.log_softmax(outputs, dim=<span class="number">1</span>), targets)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="nn与functional的区别与选择"><a href="#nn与functional的区别与选择" class="headerlink" title="nn与functional的区别与选择"></a>nn与functional的区别与选择</h2><table>
+<thead>
+<tr>
+<th align="left">特性</th>
+<th align="left">torch.nn</th>
+<th align="left">torch.nn.functional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>接口类型</strong></td>
+<td align="left">面向对象（类）</td>
+<td align="left">函数式</td>
+</tr>
+<tr>
+<td align="left"><strong>包含状态</strong></td>
+<td align="left">包含可学习参数</td>
+<td align="left">无状态</td>
+</tr>
+<tr>
+<td align="left"><strong>使用场景</strong></td>
+<td align="left">包含参数的层（如Linear, Conv）</td>
+<td align="left">无参数操作（激活函数、损失等）</td>
+</tr>
+<tr>
+<td align="left"><strong>优点</strong></td>
+<td align="left">模块化，易于管理参数</td>
+<td align="left">灵活，可直接在forward中使用</td>
+</tr>
+<tr>
+<td align="left"><strong>模型序列化</strong></td>
+<td align="left">自动处理参数保存</td>
+<td align="left">需要手动处理参数</td>
+</tr>
+<tr>
+<td align="left"><strong>示例</strong></td>
+<td align="left"><code>self.conv = nn.Conv2d(...)</code></td>
+<td align="left"><code>F.relu(x)</code></td>
+</tr>
+</tbody></table>
+<h3 id="混合使用示例"><a href="#混合使用示例" class="headerlink" title="混合使用示例"></a>混合使用示例</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HybridModel</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        <span class="variable language_">self</span>.conv1 = nn.Conv2d(<span class="number">3</span>, <span class="number">16</span>, <span class="number">3</span>)</span><br><span class="line">        <span class="variable language_">self</span>.conv2 = nn.Conv2d(<span class="number">16</span>, <span class="number">32</span>, <span class="number">3</span>)</span><br><span class="line">        <span class="variable language_">self</span>.fc = nn.Linear(<span class="number">32</span> * <span class="number">6</span> * <span class="number">6</span>, <span class="number">10</span>)  <span class="comment"># 假设输入32×32，经过两次池化后6×6</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="comment"># 使用nn模块的卷积层</span></span><br><span class="line">        x = <span class="variable language_">self</span>.conv1(x)</span><br><span class="line">        <span class="comment"># 使用functional的激活函数和池化</span></span><br><span class="line">        x = F.relu(x)</span><br><span class="line">        x = F.max_pool2d(x, <span class="number">2</span>)</span><br><span class="line">        </span><br><span class="line">        x = <span class="variable language_">self</span>.conv2(x)</span><br><span class="line">        x = F.relu(x)</span><br><span class="line">        x = F.max_pool2d(x, <span class="number">2</span>)</span><br><span class="line">        </span><br><span class="line">        x = x.view(-<span class="number">1</span>, <span class="number">32</span> * <span class="number">6</span> * <span class="number">6</span>)</span><br><span class="line">        x = <span class="variable language_">self</span>.fc(x)</span><br><span class="line">        <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="模型训练流程概览"><a href="#模型训练流程概览" class="headerlink" title="模型训练流程概览"></a>模型训练流程概览</h2><p>结合<code>nn</code>和<code>functional</code>的完整训练流程：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch.optim <span class="keyword">as</span> optim</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化模型</span></span><br><span class="line">model = HybridModel()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义优化器</span></span><br><span class="line">optimizer = optim.Adam(model.parameters(), lr=<span class="number">0.001</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练循环</span></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> inputs, labels <span class="keyword">in</span> train_loader:</span><br><span class="line">        <span class="comment"># 前向传播</span></span><br><span class="line">        outputs = model(inputs)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 计算损失（使用functional）</span></span><br><span class="line">        loss = F.cross_entropy(outputs, labels)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 反向传播</span></span><br><span class="line">        optimizer.zero_grad()</span><br><span class="line">        loss.backward()</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 更新参数</span></span><br><span class="line">        optimizer.step()</span><br><span class="line">        </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Epoch <span class="subst">&#123;epoch+<span class="number">1</span>&#125;</span>, Loss: <span class="subst">&#123;loss.item():<span class="number">.4</span>f&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h2><p>之前软件安全赛在半决赛的时候，差一道手搓CNN的题就能进决赛，于是一直怀恨在心，所以就拿这道题练手</p>
+<h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><blockquote>
+<p>各位员工：</p>
+<p>为了提升公司的安全管理水平，从即日起，我司将引入AI技术对通行密码进行管理。相关的密码图片内容已整理并放入压缩包中，压缩包的密码将由各部门负责组织发放，请大家留意部门通知。</p>
+<p>请注意公司内部AI模型的使用规范：<br>1.除最后一层外与池化层外其他隐藏层输出均需要通过激活函数<br>2.至少需要通过两次池化层<br>3.注意隐藏之间输出数据格式的匹配，必要时对数据张量进行重塑<br>4.为保证模型准确性，输入图片应转换为灰度图</p>
+<p>感谢大家的配合与支持。如有疑问，请随时与人事部联系。</p>
+<p>此致</p>
+</blockquote>
+<h4 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h4><blockquote>
+<p>password.pt</p>
+<p>flag——   0.bmp</p>
+<p>​         | —  1.bmp</p>
+<p>​         | —  …</p>
+<p>​	 |— 13.bmp</p>
+</blockquote>
+<p>由于当时是线下赛，不能使用搜索和AI，所以很考验基本功手搓代码的能力。</p>
+<p>给出的模型文件可以通过Netron查询</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/06/26/pytorch%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/4.png" class title="Netron">
+
+<p>可以分析得到以下结果：</p>
+<p>该CNN是一个序列结构，包含以下层（按顺序）：</p>
+<ul>
+<li><strong>两个卷积层（Conv2d）</strong>：用于提取图像特征。</li>
+<li><strong>一个最大池化层（MaxPool2d）</strong>：用于降采样，减少特征图尺寸。</li>
+<li><strong>两个全连接层（Linear）</strong>：用于分类输出。</li>
+</ul>
+<p>再结合题目描述，我们就可以进行如下代码的编写：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入必要的库</span></span><br><span class="line"><span class="keyword">import</span> torch  <span class="comment"># PyTorch深度学习框架</span></span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn  <span class="comment"># 神经网络模块</span></span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F  <span class="comment"># 神经网络函数式接口</span></span><br><span class="line"><span class="keyword">from</span> torchinfo <span class="keyword">import</span> summary  <span class="comment"># 模型结构可视化工具</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image  <span class="comment"># 图像处理库</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np  <span class="comment"># 数值计算库</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义简单的CNN模型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SimpleCNN</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        模型初始化函数，定义网络层结构</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">super</span>(SimpleCNN, <span class="variable language_">self</span>).__init__()  <span class="comment"># 调用父类构造函数</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 第一卷积层：输入1通道(灰度图)，输出32通道，3x3卷积核，填充1保持尺寸不变</span></span><br><span class="line">        <span class="variable language_">self</span>.conv1 = nn.Conv2d(in_channels=<span class="number">1</span>, out_channels=<span class="number">32</span>, kernel_size=<span class="number">3</span>, padding=<span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 第二卷积层：输入32通道，输出64通道，3x3卷积核，填充1保持尺寸不变</span></span><br><span class="line">        <span class="variable language_">self</span>.conv2 = nn.Conv2d(in_channels=<span class="number">32</span>, out_channels=<span class="number">64</span>, kernel_size=<span class="number">3</span>, padding=<span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 第一全连接层：输入3136维特征，输出128维特征</span></span><br><span class="line">        <span class="comment"># 3136 = 64通道 * 7高度 * 7宽度 (经过两次池化后尺寸)</span></span><br><span class="line">        <span class="variable language_">self</span>.fc1 = nn.Linear(<span class="number">3136</span>, <span class="number">128</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 第二全连接层(输出层)：输入128维特征，输出10个类别的概率</span></span><br><span class="line">        <span class="variable language_">self</span>.fc2 = nn.Linear(<span class="number">128</span>, <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        前向传播函数，定义数据在网络中的流动路径</span></span><br><span class="line"><span class="string">        x: 输入张量，形状应为 [batch_size, 1, height, width]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 第一卷积块</span></span><br><span class="line">        x = <span class="variable language_">self</span>.conv1(x)  <span class="comment"># 卷积操作 [batch, 32, 28, 28] (如果输入是28x28)</span></span><br><span class="line">        x = F.relu(x)      <span class="comment"># ReLU激活函数</span></span><br><span class="line">        x = F.max_pool2d(x, <span class="number">2</span>)  <span class="comment"># 2x2最大池化，尺寸减半 [batch, 32, 14, 14]</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 第二卷积块</span></span><br><span class="line">        x = <span class="variable language_">self</span>.conv2(x)  <span class="comment"># 卷积操作 [batch, 64, 14, 14]</span></span><br><span class="line">        x = F.relu(x)      <span class="comment"># ReLU激活函数</span></span><br><span class="line">        x = F.max_pool2d(x, <span class="number">2</span>)  <span class="comment"># 2x2最大池化，尺寸减半 [batch, 64, 7, 7]</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 展平操作：将多维特征图转换为一维向量</span></span><br><span class="line">        <span class="comment"># x.view(-1) 会将所有元素展平为一个长向量，但会丢失批次信息</span></span><br><span class="line">        <span class="comment"># 更好的做法是：x = x.view(x.size(0), -1) 这样会保留批次维度</span></span><br><span class="line">        x = x.view(-<span class="number">1</span>)    <span class="comment"># 展平为单一向量 [batch_size * 64 * 7 * 7]</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 全连接层部分</span></span><br><span class="line">        x = <span class="variable language_">self</span>.fc1(x)   <span class="comment"># 全连接层1 [batch_size * 3136] -&gt; [batch_size * 128]</span></span><br><span class="line">        x = F.relu(x)     <span class="comment"># ReLU激活函数</span></span><br><span class="line">        x = <span class="variable language_">self</span>.fc2(x)   <span class="comment"># 输出层 [batch_size * 128] -&gt; [batch_size * 10]</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载预训练模型</span></span><br><span class="line"><span class="comment"># weights_only=False 允许加载任意Python对象，但存在安全风险，仅用于可信来源</span></span><br><span class="line">model = torch.load(<span class="string">&quot;password.pt&quot;</span>, weights_only=<span class="literal">False</span>)</span><br><span class="line">model.<span class="built_in">eval</span>()  <span class="comment"># 设置为评估模式（关闭dropout等训练特定操作）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 处理14张图像</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">14</span>):</span><br><span class="line">    <span class="comment"># 加载并预处理图像</span></span><br><span class="line">    img = Image.<span class="built_in">open</span>(<span class="string">f&quot;flag/<span class="subst">&#123;i&#125;</span>.bmp&quot;</span>).convert(<span class="string">&#x27;L&#x27;</span>)  <span class="comment"># 打开图像并转换为灰度模式</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 打印模型结构信息（每次迭代都打印，可移到循环外优化性能）</span></span><br><span class="line">    <span class="comment"># 参数：[1, 1, 28, 28] 表示批次大小1, 通道数1, 高度28, 宽度28</span></span><br><span class="line">    summary(model, [<span class="number">1</span>, <span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>])</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 将图像转换为PyTorch张量</span></span><br><span class="line">    <span class="comment"># 1. 转换为numpy数组</span></span><br><span class="line">    <span class="comment"># 2. 转换为torch.Tensor</span></span><br><span class="line">    <span class="comment"># 3. 添加一个维度作为通道维度 [1, 28, 28] -&gt; [通道, 高, 宽]</span></span><br><span class="line">    inp = torch.tensor(np.array(img), dtype=torch.float32).unsqueeze(<span class="number">0</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 模型预测</span></span><br><span class="line">    output = model(inp)  <span class="comment"># 前向传播获取输出</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 获取预测结果：取最大概率的类别索引</span></span><br><span class="line">    ans = torch.argmax(output).item()  <span class="comment"># .item()将单元素张量转为Python标量</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 打印结果（不换行）</span></span><br><span class="line">    <span class="built_in">print</span>(ans, end=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>从目前的角度来看，并不算很难写的代码，但对于从未接触过的人来说，基本没有写出来的可能性( ´•̥̥̥ω•̥̥̥&#96; )</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> pytorch入门笔记</li>
+        <li><strong>作者:</strong> Wang1r</li>
+        <li><strong>创建于
+                :</strong> 2025-06-26 10:17:20</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-06-27 21:06:49
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://wang1rrr.github.io/2025/06/26/pytorch入门笔记/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">#基础知识</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2025/06/15/%E6%98%A5%E7%A7%8B%E4%BA%91%E5%A2%83%EF%BC%9Ainitial/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">春秋云境：initial</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">目录</div>
+        <div class="page-title">pytorch入门笔记</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E5%85%83%E6%A8%A1%E5%9E%8B"><span class="nav-text">人工神经元模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84"><span class="nav-text">神经网络结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="nav-text">激活函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95"><span class="nav-text">优化算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="nav-text">前向传播</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="nav-text">反向传播</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%87%8D%E6%9B%B4%E6%96%B0"><span class="nav-text">权重更新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%8D%95%E4%BD%8D%E5%85%83%E2%80%94%E2%80%94tensor"><span class="nav-text">最基本的单位元——tensor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAtensor"><span class="nav-text">创建tensor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="nav-text">tensor基本属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"><span class="nav-text">tensor基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor%E4%B8%8ENumPy%E4%BA%92%E8%BD%AC"><span class="nav-text">tensor与NumPy互转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GPU%E5%8A%A0%E9%80%9F"><span class="nav-text">GPU加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E6%9C%BA%E5%88%B6"><span class="nav-text">自动求导机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8tensor%E6%93%8D%E4%BD%9C"><span class="nav-text">常用tensor操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97%E2%80%94%E2%80%94torch-nn%E4%B8%8Etorch-nn-functional"><span class="nav-text">神经网络核心模块——torch.nn与torch.nn.functional</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#torch-nn%E6%A8%A1%E5%9D%97"><span class="nav-text">torch.nn模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="nav-text">常用神经网络层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E5%AE%B9%E5%99%A8%EF%BC%9AModule"><span class="nav-text">模型容器：Module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="nav-text">损失函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#torch-nn-functional%E6%A8%A1%E5%9D%97"><span class="nav-text">torch.nn.functional模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0-1"><span class="nav-text">激活函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E6%93%8D%E4%BD%9C"><span class="nav-text">卷积操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B1%A0%E5%8C%96%E6%93%8D%E4%BD%9C"><span class="nav-text">池化操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dropout"><span class="nav-text">Dropout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0-1"><span class="nav-text">损失函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nn%E4%B8%8Efunctional%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E9%80%89%E6%8B%A9"><span class="nav-text">nn与functional的区别与选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="nav-text">混合使用示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%B5%81%E7%A8%8B%E6%A6%82%E8%A7%88"><span class="nav-text">模型训练流程概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-text">实例分析</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Wang1r</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 22 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.3</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+</body>
+</html>
